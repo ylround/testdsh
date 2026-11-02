@@ -67,6 +67,8 @@ dsh-superagent 联调仓库。
 
 Hello from superagent
 
+Feishu test ok
+
 ## 本地运行与自检
 
 ```bash
