@@ -4,8 +4,12 @@
   var BANK = window.QUIZ_BANK;
   var SUBJECTS = ['chinese', 'math', 'english'];
   var RUN_SIZE = 10;
-  var STORAGE_KEY = 'midterm-quiz-v1';
+  var REVIEW_SIZE = 10;
+  var STORAGE_KEY = 'midterm-quiz-v2';
+  var LEGACY_KEY = 'midterm-quiz-v1';
+  var MASTERY_STREAK = 2;
   var LETTERS = ['A', 'B', 'C', 'D'];
+  var QUESTION_INDEX = {};
 
   var ADVICE = {
     chinese: {
@@ -55,17 +59,33 @@
       .replace(/'/g, '&#39;');
   }
 
+  function emptyStore() {
+    return {
+      best: {},
+      sound: true,
+      stats: { answered: 0, correct: 0, days: {} },
+      mistakes: {},
+    };
+  }
+
   function loadStore() {
     try {
-      var raw = window.localStorage.getItem(STORAGE_KEY);
-      if (!raw) return { best: {}, sound: true };
-      var parsed = JSON.parse(raw);
+      var raw = window.localStorage.getItem(STORAGE_KEY) || window.localStorage.getItem(LEGACY_KEY);
+      if (!raw) return emptyStore();
+      var parsed = JSON.parse(raw) || {};
+      var stats = parsed.stats && typeof parsed.stats === 'object' ? parsed.stats : {};
       return {
-        best: parsed && typeof parsed.best === 'object' && parsed.best ? parsed.best : {},
-        sound: !parsed || parsed.sound !== false,
+        best: parsed.best && typeof parsed.best === 'object' ? parsed.best : {},
+        sound: parsed.sound !== false,
+        stats: {
+          answered: Number(stats.answered) || 0,
+          correct: Number(stats.correct) || 0,
+          days: stats.days && typeof stats.days === 'object' ? stats.days : {},
+        },
+        mistakes: parsed.mistakes && typeof parsed.mistakes === 'object' ? parsed.mistakes : {},
       };
     } catch (error) {
-      return { best: {}, sound: true };
+      return emptyStore();
     }
   }
 
@@ -75,6 +95,98 @@
     } catch (error) {
       /* 隐私模式或存储已满时，游戏本身仍可正常使用 */
     }
+  }
+
+  function dateKey(date) {
+    var target = date || new Date();
+    return target.getFullYear() + '-' +
+      String(target.getMonth() + 1).padStart(2, '0') + '-' +
+      String(target.getDate()).padStart(2, '0');
+  }
+
+  function computeStreak() {
+    var days = state.store.stats.days;
+    var cursor = new Date();
+    if (!days[dateKey(cursor)]) cursor.setDate(cursor.getDate() - 1);
+    var streak = 0;
+    while (days[dateKey(cursor)]) {
+      streak += 1;
+      cursor.setDate(cursor.getDate() - 1);
+    }
+    return streak;
+  }
+
+  function buildQuestionIndex() {
+    SUBJECTS.forEach(function (subjectKey) {
+      BANK[subjectKey].questions.forEach(function (question) {
+        QUESTION_INDEX[question.id] = { subject: subjectKey, question: question };
+      });
+    });
+  }
+
+  function pruneMistakes() {
+    Object.keys(state.store.mistakes).forEach(function (id) {
+      if (!QUESTION_INDEX[id]) delete state.store.mistakes[id];
+    });
+  }
+
+  function dueMistakes() {
+    return Object.keys(state.store.mistakes).map(function (id) {
+      return { id: id, record: state.store.mistakes[id] };
+    }).filter(function (item) {
+      return QUESTION_INDEX[item.id] && item.record && !item.record.mastered;
+    });
+  }
+
+  function prepareQuestion(question, subjectKey) {
+    var options = question.options.map(function (text, index) {
+      return { text: text, correct: index === question.answer };
+    });
+    shuffle(options);
+    return {
+      id: question.id,
+      subject: subjectKey,
+      point: question.point,
+      q: question.q,
+      explain: question.explain,
+      options: options,
+      correctIndex: options.findIndex(function (option) { return option.correct; }),
+    };
+  }
+
+  function recordAttempt(question, isCorrect) {
+    var stats = state.store.stats;
+    stats.answered += 1;
+    if (isCorrect) stats.correct += 1;
+
+    var today = dateKey();
+    stats.days[today] = (stats.days[today] || 0) + 1;
+    var dayKeys = Object.keys(stats.days).sort();
+    if (dayKeys.length > 120) {
+      dayKeys.slice(0, dayKeys.length - 120).forEach(function (key) {
+        delete stats.days[key];
+      });
+    }
+
+    var record = state.store.mistakes[question.id];
+    if (!isCorrect) {
+      if (!record) {
+        record = { wrong: 0, streak: 0, mastered: false };
+        state.store.mistakes[question.id] = record;
+      }
+      record.subject = question.subject;
+      record.point = question.point;
+      record.wrong += 1;
+      record.streak = 0;
+      record.mastered = false;
+      record.updatedAt = Date.now();
+    } else if (record) {
+      record.streak = (record.streak || 0) + 1;
+      record.updatedAt = Date.now();
+      if (record.streak >= MASTERY_STREAK) record.mastered = true;
+    }
+
+    saveStore();
   }
 
   function totalStars() {
@@ -193,6 +305,52 @@
 
     els.totalStars.textContent = totalStars() + ' / 9';
     updateSoundButton();
+    renderArchive();
+  }
+
+  function renderArchive() {
+    var stats = state.store.stats;
+    var accuracy = stats.answered ? Math.round((stats.correct / stats.answered) * 100) : null;
+    var due = dueMistakes();
+
+    els.statAnswered.textContent = String(stats.answered);
+    els.statAccuracy.textContent = accuracy === null ? '—' : accuracy + '%';
+    els.statStreak.textContent = String(computeStreak());
+    els.statDue.textContent = String(due.length);
+
+    var groups = {};
+    due.forEach(function (item) {
+      var entry = QUESTION_INDEX[item.id];
+      var subjectKey = SUBJECTS.indexOf(item.record.subject) >= 0 ? item.record.subject : entry.subject;
+      var point = item.record.point || entry.question.point;
+      var key = subjectKey + '|' + point;
+      if (!groups[key]) groups[key] = { subject: subjectKey, point: point, count: 0 };
+      groups[key].count += 1;
+    });
+
+    var weak = Object.keys(groups).map(function (key) { return groups[key]; }).sort(function (a, b) {
+      if (b.count !== a.count) return b.count - a.count;
+      return a.point.localeCompare(b.point, 'zh-Hans-CN');
+    }).slice(0, 5);
+
+    if (!weak.length) {
+      els.weakPoints.innerHTML = '<li class="weak-chip weak-chip--empty">还没有待复习错题。完成一次闯关，错题会自动收进来。</li>';
+    } else {
+      els.weakPoints.innerHTML = weak.map(function (group) {
+        return (
+          '<li class="weak-chip weak-chip--' + group.subject + '">' +
+            '<span>' + escapeHtml(BANK[group.subject].label) + ' · ' + escapeHtml(group.point) + '</span>' +
+            '<b>' + group.count + ' 题</b>' +
+          '</li>'
+        );
+      }).join('');
+    }
+
+    els.reviewWeak.disabled = due.length === 0;
+    els.reviewWeak.textContent = due.length ? '错题重练（' + due.length + '）' : '暂无待复习错题';
+    els.mistakeSummary.textContent = due.length
+      ? '答错自动收录；同一题连续答对 ' + MASTERY_STREAK + ' 次，标记为掌握。'
+      : '答错的题会自动收进这里，随时回来重练。';
   }
 
   function scrollToSubjects() {
@@ -207,24 +365,41 @@
   function startRun(subjectKey) {
     var subject = BANK[subjectKey];
     var picked = shuffle(subject.questions).slice(0, Math.min(RUN_SIZE, subject.questions.length));
-    var questions = picked.map(function (question) {
-      var options = question.options.map(function (text, index) {
-        return { text: text, correct: index === question.answer };
-      });
-      shuffle(options);
-      return {
-        id: question.id,
-        point: question.point,
-        q: question.q,
-        explain: question.explain,
-        options: options,
-        correctIndex: options.findIndex(function (option) { return option.correct; }),
-      };
-    });
-
-    state.run = {
+    beginRun({
+      mode: 'quiz',
       subject: subjectKey,
-      questions: questions,
+      label: subject.label + ' · 期中闯关',
+      questions: picked.map(function (question) {
+        return prepareQuestion(question, subjectKey);
+      }),
+    });
+  }
+
+  function startReviewRun() {
+    var picked = dueMistakes().sort(function (a, b) {
+      if (b.record.wrong !== a.record.wrong) return b.record.wrong - a.record.wrong;
+      return (a.record.updatedAt || 0) - (b.record.updatedAt || 0);
+    }).slice(0, REVIEW_SIZE);
+
+    if (!picked.length) return;
+
+    beginRun({
+      mode: 'review',
+      subject: null,
+      label: '错题重练 · ' + picked.length + ' 题',
+      questions: picked.map(function (item) {
+        var entry = QUESTION_INDEX[item.id];
+        return prepareQuestion(entry.question, entry.subject);
+      }),
+    });
+  }
+
+  function beginRun(config) {
+    state.run = {
+      mode: config.mode,
+      subject: config.subject,
+      label: config.label,
+      questions: config.questions,
       index: 0,
       answers: [],
       score: 0,
@@ -235,8 +410,12 @@
       seconds: 0,
     };
 
-    document.body.dataset.subject = subjectKey;
-    els.quizSubject.textContent = subject.label + ' · 期中闯关';
+    if (config.subject) {
+      document.body.dataset.subject = config.subject;
+    } else {
+      delete document.body.dataset.subject;
+    }
+    els.quizSubject.textContent = config.label;
     showScreen('quiz');
     renderQuestion();
     startTimer();
@@ -267,7 +446,6 @@
   function renderQuestion() {
     var run = state.run;
     var question = run.questions[run.index];
-    var subject = BANK[run.subject];
 
     run.locked = false;
     els.quizIndex.textContent = '第 ' + (run.index + 1) + ' / ' + run.questions.length + ' 题';
@@ -277,7 +455,7 @@
     if (run.combo >= 2) els.quizCombo.textContent = '🔥 连击 ×' + run.combo;
 
     els.questionTag.textContent = question.point;
-    els.questionTag.dataset.subject = run.subject;
+    els.questionTag.dataset.subject = question.subject;
     els.questionText.textContent = question.q.replace(/\n/g, '\n');
 
     els.options.innerHTML = question.options.map(function (option, index) {
@@ -298,9 +476,13 @@
       });
     });
 
-    els.quizSubject.textContent = subject.label + ' · 期中闯关';
-    els.quizSubject.dataset.subject = run.subject;
-    els.quizCard.className = 'question-card question-card--' + run.subject;
+    els.quizSubject.textContent = run.label;
+    if (run.subject) {
+      els.quizSubject.dataset.subject = run.subject;
+    } else {
+      delete els.quizSubject.dataset.subject;
+    }
+    els.quizCard.className = 'question-card question-card--' + question.subject;
     window.scrollTo(0, 0);
   }
 
@@ -322,6 +504,7 @@
     }
 
     run.answers.push({ selected: selectedIndex, correct: isCorrect });
+    recordAttempt(question, isCorrect);
     els.quizScore.textContent = String(run.score);
     els.quizCombo.hidden = run.combo < 2;
     if (run.combo >= 2) els.quizCombo.textContent = '🔥 连击 ×' + run.combo;
@@ -374,23 +557,28 @@
     var accuracy = correct / total;
     var stars = accuracy >= 0.9 ? 3 : accuracy >= 0.7 ? 2 : 1;
     var seconds = Math.max(1, Math.round((Date.now() - run.startedAt) / 1000));
-    var previous = state.store.best[run.subject];
-    var isRecord = !previous ||
-      stars > previous.stars ||
-      (stars === previous.stars && accuracy >= previous.correct / previous.total);
+    var isRecord = false;
 
-    if (isRecord) {
-      state.store.best[run.subject] = {
-        score: run.score,
-        stars: stars,
-        correct: correct,
-        total: total,
-        at: Date.now(),
-      };
-      saveStore();
+    if (run.mode === 'quiz' && run.subject) {
+      var previous = state.store.best[run.subject];
+      isRecord = !previous ||
+        stars > previous.stars ||
+        (stars === previous.stars && accuracy >= previous.correct / previous.total);
+
+      if (isRecord) {
+        state.store.best[run.subject] = {
+          score: run.score,
+          stars: stars,
+          correct: correct,
+          total: total,
+          at: Date.now(),
+        };
+        saveStore();
+      }
     }
 
     var result = {
+      mode: run.mode,
       subject: run.subject,
       total: total,
       correct: correct,
@@ -418,17 +606,30 @@
   }
 
   function renderResult(result) {
-    var subject = BANK[result.subject];
+    var subject = result.subject ? BANK[result.subject] : null;
+    var isReview = result.mode === 'review';
     var accuracyPercent = Math.round(result.accuracy * 100);
-    var title = result.stars === 3 ? '太厉害了，小侦探！' : result.stars === 2 ? '不错，再往前一步！' : '找到进步空间啦！';
-    var note = result.stars === 3
-      ? '知识点掌握得很扎实，换一科继续挑战吧。'
-      : result.stars === 2
-        ? '大部分知识点都掌握了，重点看看下面的小建议。'
-        : '别着急，先把错题弄懂，再来一次一定更好。';
+    var title;
+    var note;
 
-    els.resultSubject.textContent = subject.label + ' · 期中闯关';
-    els.resultSubject.dataset.subject = result.subject;
+    if (isReview) {
+      title = result.stars === 3 ? '错题都拿下啦！' : result.stars === 2 ? '大部分错题已经拿下！' : '再练一组就更稳了！';
+      note = '错题重练完成。同一道题连续答对 2 次，就会从错题本里标记为掌握。';
+    } else {
+      title = result.stars === 3 ? '太厉害了，小侦探！' : result.stars === 2 ? '不错，再往前一步！' : '找到进步空间啦！';
+      note = result.stars === 3
+        ? '知识点掌握得很扎实，换一科继续挑战吧。'
+        : result.stars === 2
+          ? '大部分知识点都掌握了，重点看看下面的小建议。'
+          : '别着急，先把错题弄懂，再来一次一定更好。';
+    }
+
+    els.resultSubject.textContent = isReview ? '错题重练' : subject.label + ' · 期中闯关';
+    if (result.subject) {
+      els.resultSubject.dataset.subject = result.subject;
+    } else {
+      delete els.resultSubject.dataset.subject;
+    }
     els.resultTitle.textContent = title;
     els.resultNote.textContent = note;
     els.resultScore.textContent = String(result.score);
@@ -450,16 +651,38 @@
     renderTips(result);
     renderWrongAnswers(result);
 
-    els.retryBtn.textContent = '再战' + subject.label + ' →';
-    els.retryBtn.dataset.subject = result.subject;
+    var due = dueMistakes().length;
+    els.retryBtn.hidden = false;
+    if (isReview) {
+      els.notebookNote.textContent = due
+        ? '还没掌握的错题会继续留在错题本；连续答对 2 次后自动标记为掌握。'
+        : '这组错题都标记为掌握了，去挑战一科新的吧。';
+      els.retryBtn.hidden = due === 0;
+      els.retryBtn.textContent = '再练一组错题（' + due + '）→';
+    } else {
+      els.notebookNote.textContent = result.correct < result.total
+        ? '答错的题已自动收进错题本，连续答对 2 次就会标记为掌握。'
+        : due
+          ? '这次没有新错题；错题本里还有 ' + due + ' 道待复习，可以点“错题重练”。'
+          : '这次没有错题，错题本也清空了，换一科继续挑战吧。';
+      els.retryBtn.textContent = '再战' + subject.label + ' →';
+    }
+    els.retryBtn.dataset.mode = result.mode;
+    els.retryBtn.dataset.subject = result.subject || '';
+
+    els.reviewBtn.hidden = isReview || due === 0;
+    els.reviewBtn.textContent = '错题重练（' + due + '）→';
+    els.reviewBtn.dataset.mode = 'review';
   }
 
   function groupByPoint(result) {
     var map = {};
     result.questions.forEach(function (question, index) {
-      if (!map[question.point]) map[question.point] = { point: question.point, total: 0, correct: 0 };
-      map[question.point].total += 1;
-      if (result.answers[index].correct) map[question.point].correct += 1;
+      var subjectKey = question.subject || result.subject;
+      var key = subjectKey + '|' + question.point;
+      if (!map[key]) map[key] = { point: question.point, subject: subjectKey, total: 0, correct: 0 };
+      map[key].total += 1;
+      if (result.answers[index].correct) map[key].correct += 1;
     });
     return Object.keys(map).map(function (key) { return map[key]; }).sort(function (a, b) {
       var diff = a.correct / a.total - b.correct / b.total;
@@ -473,10 +696,11 @@
     els.knowledgeList.innerHTML = groups.map(function (group) {
       var percent = Math.round((group.correct / group.total) * 100);
       var level = percent >= 80 ? 'good' : percent >= 60 ? 'mid' : 'weak';
+      var name = (result.mode === 'review' ? BANK[group.subject].label + ' · ' : '') + group.point;
       return (
         '<div class="knowledge-row knowledge-row--' + level + '">' +
           '<div class="knowledge-row__top">' +
-            '<span class="knowledge-name">' + escapeHtml(group.point) + '</span>' +
+            '<span class="knowledge-name">' + escapeHtml(name) + '</span>' +
             '<span class="knowledge-count">' + group.correct + ' / ' + group.total + ' 题</span>' +
           '</div>' +
           '<div class="knowledge-bar" role="img" aria-label="' + escapeHtml(group.point) + '正确率 ' + percent + '%">' +
@@ -489,7 +713,6 @@
 
   function renderTips(result) {
     var groups = groupByPoint(result);
-    var adviceTable = ADVICE[result.subject] || {};
     var weak = groups.filter(function (group) { return group.correct / group.total < 0.7; });
     var tips = [];
 
@@ -497,10 +720,14 @@
       tips.push('这次各知识点都掌握得不错，把做对的题讲给家人听，能讲明白才是真掌握。');
     } else {
       weak.slice(0, 3).forEach(function (group) {
+        var adviceTable = ADVICE[group.subject] || {};
         tips.push(adviceTable[group.point] || '把“' + group.point + '”的错题再做一遍，并把解题思路讲给家人听。');
       });
     }
 
+    if (result.mode === 'review') {
+      tips.push('连续答对两次的题会标记为掌握；隔一天再回来复习一次，记得更牢。');
+    }
     if (result.correct < result.total) {
       tips.push('把错题遮住答案再做一遍，能独立做对才算真的会了。');
     }
@@ -664,8 +891,17 @@
     els.tips = $('#tips');
     els.wrongCount = $('#wrong-count');
     els.wrongList = $('#wrong-list');
+    els.notebookNote = $('#notebook-note');
+    els.reviewBtn = $('#review');
     els.retryBtn = $('#retry');
     els.confetti = $('#confetti');
+    els.statAnswered = $('#stat-answered');
+    els.statAccuracy = $('#stat-accuracy');
+    els.statStreak = $('#stat-streak');
+    els.statDue = $('#stat-due');
+    els.weakPoints = $('#weak-points');
+    els.mistakeSummary = $('#mistake-summary');
+    els.reviewWeak = $('#review-weak');
 
     screens.home = $('#screen-home');
     screens.quiz = $('#screen-quiz');
@@ -684,8 +920,15 @@
     els.nextBtn.addEventListener('click', nextQuestion);
 
     els.retryBtn.addEventListener('click', function () {
-      startRun(els.retryBtn.dataset.subject);
+      if (els.retryBtn.dataset.mode === 'review') {
+        startReviewRun();
+      } else {
+        startRun(els.retryBtn.dataset.subject);
+      }
     });
+
+    els.reviewWeak.addEventListener('click', startReviewRun);
+    els.reviewBtn.addEventListener('click', startReviewRun);
 
     $('#back-home').addEventListener('click', goHome);
 
@@ -733,12 +976,15 @@
       document.body.innerHTML = '<p style="padding:2rem">题库加载失败，请检查 assets/questions.js。</p>';
       return;
     }
+    buildQuestionIndex();
+    pruneMistakes();
     bindEvents();
     renderHome();
     updateSoundButton();
     showScreen('home');
     window.quizGame = {
       startRun: startRun,
+      startReviewRun: startReviewRun,
       state: state,
       bank: BANK,
     };

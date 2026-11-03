@@ -703,6 +703,124 @@ a {
   transform: translateX(4px);
 }
 
+/* ---------- 首页 · 学习档案 / 错题本 ---------- */
+
+.archive {
+  margin-top: clamp(34px, 5vw, 52px);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.stat-card {
+  padding: 16px 18px;
+  background: #fff;
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  box-shadow: 5px 5px 0 rgba(35, 48, 59, 0.1);
+}
+
+.stat-card b {
+  display: block;
+  font-size: clamp(1.5rem, 3vw, 1.85rem);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-card span {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.stat-card--due b {
+  color: #b43325;
+}
+
+.mistake-panel {
+  margin-top: 16px;
+  padding: 20px 22px;
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.mistake-panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mistake-panel__head h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 900;
+}
+
+.mistake-panel__head p {
+  margin: 4px 0 0;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.weak-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.weak-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 11px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  background: var(--accent-soft);
+  border: 2px solid rgba(35, 48, 59, 0.16);
+  border-radius: 999px;
+}
+
+.weak-chip b {
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+
+.weak-chip--chinese {
+  background: #ffe9e3;
+}
+
+.weak-chip--math {
+  background: #e8efff;
+}
+
+.weak-chip--english {
+  background: #e4f8ee;
+}
+
+.weak-chip--empty {
+  background: rgba(255, 255, 255, 0.7);
+  border-style: dashed;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.panel__note {
+  margin: -6px 0 14px;
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+}
+
 /* ---------- 首页 · 玩法 / 页脚 ---------- */
 
 .how {
@@ -1597,6 +1715,29 @@ a {
 
   .subject-card {
     padding: 18px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 14px;
+  }
+
+  .mistake-panel {
+    padding: 18px;
+  }
+
+  .mistake-panel__head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mistake-panel__head .btn {
+    width: 100%;
   }
 
   .section-head {
