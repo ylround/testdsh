@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#FBF4E4">
   <meta name="description" content="五年级上学期期中闯关小游戏：语文、数学、英语三科随机答题，答完给出正确率、知识点掌握和学习建议。">
   <title>期中闯关局 · 五年级上学期</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body data-screen="home">
@@ -92,6 +93,31 @@
       </div>
       <div class="subject-grid" id="subject-grid"></div>
 
+      <section class="study-hub" aria-labelledby="study-hub-title">
+        <div class="section-head">
+          <h2 id="study-hub-title">配套学习</h2>
+          <p>课本和题库，都能接着用</p>
+        </div>
+        <div class="study-hub__grid">
+          <a class="hub-card hub-card--books" href="textbooks/">
+            <span class="hub-card__icon" aria-hidden="true">📖</span>
+            <span class="hub-card__copy">
+              <b>教材中心</b>
+              <span>语文、数学、英语五年级上册，在线翻页，自动记住读到哪一页。</span>
+            </span>
+            <span class="hub-card__go">打开教材 <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="hub-card hub-card--admin" href="admin/">
+            <span class="hub-card__icon" aria-hidden="true">🛠️</span>
+            <span class="hub-card__copy">
+              <b>题库后台</b>
+              <span>手动录题、程序生成、AI 辅助、拍照配图，导出后即可发布。</span>
+            </span>
+            <span class="hub-card__go">进入后台 <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </section>
+
       <section class="how" aria-labelledby="how-title">
         <div class="section-head">
           <h2 id="how-title">三步就能玩</h2>
@@ -115,7 +141,7 @@
 
       <footer class="footer">
         <p>题库范围：人教部编版语文第 1–4 单元 · 人教版数学小数乘除法与位置 · PEP 英语 Unit 1–3。</p>
-        <p class="footer__small">选项顺序每次都会打乱，适合期中前查漏补缺。成绩只保存在当前浏览器里。</p>
+        <p class="footer__small">选项顺序每次都会打乱，适合期中前查漏补缺。成绩只保存在当前浏览器里。 · <a href="textbooks/">教材中心</a> · <a href="admin/">题库后台</a></p>
       </footer>
     </section>
 
@@ -142,6 +168,7 @@
             <span class="keyboard-hint">按 1–4 可快速作答</span>
           </div>
           <h1 class="q-text" id="q-text">题目加载中…</h1>
+          <div class="q-figure-wrap" id="q-figure" hidden></div>
           <div class="options" id="options" role="group" aria-labelledby="q-text"></div>
 
           <div class="feedback" id="feedback" hidden aria-live="polite">

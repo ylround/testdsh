@@ -1,7 +1,8 @@
 (function () {
   'use strict';
 
-  var BANK = window.QUIZ_BANK;
+  var DEFAULT_BANK = window.QUIZ_BANK;
+  var BANK = loadLocalBank() || DEFAULT_BANK;
   var SUBJECTS = ['chinese', 'math', 'english'];
   var RUN_SIZE = 10;
   var STORAGE_KEY = 'midterm-quiz-v1';
@@ -53,6 +54,53 @@
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#39;');
+  }
+
+  function loadLocalBank() {
+    try {
+      var raw = window.localStorage.getItem('quiz-bank-override-v1');
+      if (!raw) return null;
+      var parsed = JSON.parse(raw);
+      var bank = parsed && parsed.bank;
+      if (!bank) return null;
+      var keys = ['chinese', 'math', 'english'];
+      for (var i = 0; i < keys.length; i += 1) {
+        var subject = bank[keys[i]];
+        if (!subject || !Array.isArray(subject.questions) || !subject.questions.length) return null;
+      }
+      return bank;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function renderBankNote() {
+    var footer = document.querySelector('#screen-home .footer');
+    if (!footer) return;
+    var note = document.getElementById('local-bank-note');
+    if (!note) {
+      note = document.createElement('div');
+      note.id = 'local-bank-note';
+      note.className = 'local-bank-note';
+      note.innerHTML = '<span id="local-bank-note-text"></span>' +
+        '<button type="button" class="btn btn--ghost btn--sm" id="local-bank-reset">恢复默认题库</button>';
+      footer.insertAdjacentElement('afterend', note);
+      note.querySelector('#local-bank-reset').addEventListener('click', function () {
+        window.localStorage.removeItem('quiz-bank-override-v1');
+        window.location.reload();
+      });
+    }
+    if (BANK === DEFAULT_BANK) {
+      note.hidden = true;
+      return;
+    }
+    var total = 0;
+    ['chinese', 'math', 'english'].forEach(function (key) {
+      total += BANK[key].questions.length;
+    });
+    note.hidden = false;
+    note.querySelector('#local-bank-note-text').textContent =
+      '正在使用本机题库：' + total + ' 题（由题库后台应用）。';
   }
 
   function loadStore() {
@@ -217,6 +265,7 @@
         point: question.point,
         q: question.q,
         explain: question.explain,
+        figure: question.figure || null,
         options: options,
         correctIndex: options.findIndex(function (option) { return option.correct; }),
       };
@@ -264,6 +313,17 @@
     els.quizTime.textContent = formatTime(elapsed);
   }
 
+  function figureHtml(figure) {
+    if (!figure || !figure.src) return '';
+    var caption = figure.caption
+      ? '<figcaption>' + escapeHtml(figure.caption) + '</figcaption>'
+      : '';
+    return '<figure class="q-figure">' +
+      '<img src="' + escapeHtml(figure.src) + '" alt="' + escapeHtml(figure.alt || '题目配图') + '" loading="lazy">' +
+      caption +
+    '</figure>';
+  }
+
   function renderQuestion() {
     var run = state.run;
     var question = run.questions[run.index];
@@ -279,6 +339,10 @@
     els.questionTag.textContent = question.point;
     els.questionTag.dataset.subject = run.subject;
     els.questionText.textContent = question.q.replace(/\n/g, '\n');
+    if (els.questionFigure) {
+      els.questionFigure.innerHTML = figureHtml(question.figure);
+      els.questionFigure.hidden = !question.figure;
+    }
 
     els.options.innerHTML = question.options.map(function (option, index) {
       return (
@@ -539,6 +603,7 @@
             '<span class="review-card__tag">' + escapeHtml(question.point) + '</span>' +
             '<p class="review-card__q">' + escapeHtml(question.q) + '</p>' +
           '</div>' +
+          figureHtml(question.figure) +
           '<div class="review-card__answers">' +
             '<span class="answer-pill answer-pill--wrong">你的答案：' + escapeHtml(selectedText) + '</span>' +
             '<span class="answer-pill answer-pill--right">正确答案：' + escapeHtml(correctText) + '</span>' +
@@ -648,6 +713,7 @@
     els.quizCard = $('#question-card');
     els.questionTag = $('#q-tag');
     els.questionText = $('#q-text');
+    els.questionFigure = $('#q-figure');
     els.options = $('#options');
     els.feedback = $('#feedback');
     els.feedbackIcon = $('#feedback-icon');
@@ -735,6 +801,7 @@
     }
     bindEvents();
     renderHome();
+    renderBankNote();
     updateSoundButton();
     showScreen('home');
     window.quizGame = {

@@ -1,0 +1,3657 @@
+{
+  "generatedAt": "2026-11-03T08:40:25.225Z",
+  "source": {
+    "label": "cn-math-taxonomy",
+    "url": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+    "license": "CC BY-NC 4.0",
+    "note": "知识点、先修关系和题库来自 cn-math-taxonomy；仅限个人学习、教学和研究使用，商业使用需另行授权。",
+    "generatedAt": "2026-11-03T08:40:25.225Z"
+  },
+  "books": {
+    "cn-g5-v1": {
+      "subject": "chinese",
+      "label": "语文",
+      "title": "语文 五年级上册",
+      "units": {
+        "第一单元": {
+          "topicIds": [
+            "cnc_p323",
+            "cnc_p324",
+            "cnc_p325",
+            "cnc_p326",
+            "cnc_p327",
+            "cnc_p358"
+          ],
+          "questionCount": 24,
+          "choiceCount": 24,
+          "numericCount": 0
+        },
+        "第二单元": {
+          "topicIds": [
+            "cnc_p328",
+            "cnc_p329",
+            "cnc_p330",
+            "cnc_p331",
+            "cnc_p332",
+            "cnc_p333",
+            "cnc_p334"
+          ],
+          "questionCount": 28,
+          "choiceCount": 28,
+          "numericCount": 0
+        },
+        "第三单元": {
+          "topicIds": [
+            "cnc_p335",
+            "cnc_p336",
+            "cnc_p337",
+            "cnc_p338"
+          ],
+          "questionCount": 16,
+          "choiceCount": 16,
+          "numericCount": 0
+        },
+        "第四单元": {
+          "topicIds": [
+            "cnc_p339",
+            "cnc_p340",
+            "cnc_p341",
+            "cnc_p342",
+            "cnc_p343",
+            "cnc_p344",
+            "cnc_p345"
+          ],
+          "questionCount": 28,
+          "choiceCount": 28,
+          "numericCount": 0
+        },
+        "第五单元": {
+          "topicIds": [
+            "cnc_p346",
+            "cnc_p347",
+            "cnc_p348"
+          ],
+          "questionCount": 12,
+          "choiceCount": 12,
+          "numericCount": 0
+        },
+        "第六单元": {
+          "topicIds": [
+            "cnc_p349",
+            "cnc_p350",
+            "cnc_p351",
+            "cnc_p352",
+            "cnc_p353"
+          ],
+          "questionCount": 20,
+          "choiceCount": 20,
+          "numericCount": 0
+        },
+        "第七单元": {
+          "topicIds": [
+            "cnc_p354",
+            "cnc_p355",
+            "cnc_p356",
+            "cnc_p357",
+            "cnc_p359"
+          ],
+          "questionCount": 20,
+          "choiceCount": 20,
+          "numericCount": 0
+        },
+        "第八单元": {
+          "topicIds": [
+            "cnc_p360",
+            "cnc_p361",
+            "cnc_p362",
+            "cnc_p363"
+          ],
+          "questionCount": 16,
+          "choiceCount": 16,
+          "numericCount": 0
+        }
+      }
+    },
+    "ma-g5-v1": {
+      "subject": "math",
+      "label": "数学",
+      "title": "数学 五年级上册",
+      "units": {
+        "第一单元": {
+          "topicIds": [
+            "cnm_p132",
+            "cnm_p133",
+            "cnm_p134",
+            "cnm_p135"
+          ],
+          "questionCount": 16,
+          "choiceCount": 2,
+          "numericCount": 14
+        },
+        "第二单元": {
+          "topicIds": [
+            "cnm_p136"
+          ],
+          "questionCount": 4,
+          "choiceCount": 2,
+          "numericCount": 2
+        },
+        "第三单元": {
+          "topicIds": [
+            "cnm_p137",
+            "cnm_p138",
+            "cnm_p139"
+          ],
+          "questionCount": 12,
+          "choiceCount": 2,
+          "numericCount": 10
+        },
+        "第四单元": {
+          "topicIds": [
+            "cnm_p140",
+            "cnm_p141"
+          ],
+          "questionCount": 8,
+          "choiceCount": 5,
+          "numericCount": 3
+        },
+        "第五单元": {
+          "topicIds": [
+            "cnm_p142",
+            "cnm_p143",
+            "cnm_p144",
+            "cnm_p145",
+            "cnm_p146"
+          ],
+          "questionCount": 20,
+          "choiceCount": 7,
+          "numericCount": 13
+        },
+        "第六单元": {
+          "topicIds": [
+            "cnm_p240",
+            "cnm_p147",
+            "cnm_p148",
+            "cnm_p149",
+            "cnm_p150",
+            "cnm_p098"
+          ],
+          "questionCount": 24,
+          "choiceCount": 3,
+          "numericCount": 21
+        },
+        "第七单元": {
+          "topicIds": [
+            "cnm_p151"
+          ],
+          "questionCount": 4,
+          "choiceCount": 1,
+          "numericCount": 3
+        },
+        "第八单元": {
+          "topicIds": [
+            "cnm_p135",
+            "cnm_p143",
+            "cnm_p145",
+            "cnm_p146",
+            "cnm_p151"
+          ],
+          "questionCount": 20,
+          "choiceCount": 4,
+          "numericCount": 16
+        }
+      }
+    },
+    "en-g5-v1": {
+      "subject": "english",
+      "label": "英语",
+      "title": "英语（PEP）五年级上册",
+      "units": {
+        "Unit 1": {
+          "topicIds": [
+            "cne_p108",
+            "cne_p198",
+            "cne_p109",
+            "cne_p110",
+            "cne_p111",
+            "cne_p112"
+          ],
+          "questionCount": 24,
+          "choiceCount": 24,
+          "numericCount": 0
+        },
+        "Unit 2": {
+          "topicIds": [
+            "cne_p113",
+            "cne_p114",
+            "cne_p115",
+            "cne_p116",
+            "cne_p117"
+          ],
+          "questionCount": 20,
+          "choiceCount": 20,
+          "numericCount": 0
+        },
+        "Unit 3": {
+          "topicIds": [
+            "cne_p118",
+            "cne_p119",
+            "cne_p120"
+          ],
+          "questionCount": 12,
+          "choiceCount": 12,
+          "numericCount": 0
+        },
+        "Recycle 1": {
+          "topicIds": [
+            "cne_p108",
+            "cne_p198",
+            "cne_p109",
+            "cne_p110",
+            "cne_p111",
+            "cne_p112",
+            "cne_p113",
+            "cne_p114",
+            "cne_p115",
+            "cne_p116",
+            "cne_p117",
+            "cne_p118",
+            "cne_p119",
+            "cne_p120"
+          ],
+          "questionCount": 56,
+          "choiceCount": 56,
+          "numericCount": 0
+        },
+        "Unit 4": {
+          "topicIds": [
+            "cne_p121",
+            "cne_p122",
+            "cne_p123",
+            "cne_p124",
+            "cne_p167"
+          ],
+          "questionCount": 20,
+          "choiceCount": 20,
+          "numericCount": 0
+        },
+        "Unit 5": {
+          "topicIds": [
+            "cne_p125",
+            "cne_p126",
+            "cne_p127",
+            "cne_p128"
+          ],
+          "questionCount": 16,
+          "choiceCount": 15,
+          "numericCount": 1
+        },
+        "Unit 6": {
+          "topicIds": [
+            "cne_p129",
+            "cne_p130",
+            "cne_p131",
+            "cne_p132"
+          ],
+          "questionCount": 16,
+          "choiceCount": 14,
+          "numericCount": 2
+        },
+        "Recycle 2": {
+          "topicIds": [
+            "cne_p121",
+            "cne_p122",
+            "cne_p123",
+            "cne_p124",
+            "cne_p167",
+            "cne_p125",
+            "cne_p126",
+            "cne_p127",
+            "cne_p128",
+            "cne_p129",
+            "cne_p130",
+            "cne_p131",
+            "cne_p132"
+          ],
+          "questionCount": 52,
+          "choiceCount": 49,
+          "numericCount": 3
+        }
+      }
+    }
+  },
+  "topics": {
+    "cnc_p323": {
+      "id": "cnc_p323",
+      "subject": "chinese",
+      "name": "阅读《桂花雨》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第1单元 课文·桂花雨",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂琦君回忆童年摇桂花，桂花落下来像一场雨。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "「桂花雨」指的是什么？",
+        "answer": "摇桂花时落下的花，像下雨"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p324": {
+      "id": "cnc_p324",
+      "subject": "chinese",
+      "name": "阅读《落花生》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第1单元 课文·桂花雨",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂许地山借花生说明：要做有用的人，不要只讲体面。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "《落花生》的作者是谁？",
+        "answer": "许地山"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p323",
+          "name": "阅读《桂花雨》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p325": {
+      "id": "cnc_p325",
+      "subject": "chinese",
+      "name": "阅读《珍珠鸟》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第1单元 课文·桂花雨",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂冯骥才写珍珠鸟渐渐亲近人：从笼子里到书桌，最后落到肩上。信赖会创造出美好的境界。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "《珍珠鸟》的作者是谁？",
+        "answer": "冯骥才"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p324",
+          "name": "阅读《落花生》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p326": {
+      "id": "cnc_p326",
+      "subject": "chinese",
+      "name": "习作：我的心爱之物",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第1单元 课文·桂花雨",
+      "domain": "习作基础",
+      "type": "application",
+      "description": "写一件自己心爱的东西：样子要看得见，得到它或和它有关的经过要一步一步写清楚，还要写出为什么舍不得。空说「我很喜欢」不算写清楚。",
+      "masteryCriteria": [
+        "能按要求把话写完整",
+        "能判断哪一句更符合题目"
+      ],
+      "diagnosticQuestion": {
+        "question": "写一件心爱之物，经过部分怎样才算清楚？",
+        "answer": "写出一步一步是怎么得到的、后来又怎样用"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.XZ.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p325",
+          "name": "阅读《珍珠鸟》",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p327": {
+      "id": "cnc_p327",
+      "subject": "chinese",
+      "name": "语文园地一·易读错的字音",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第1单元 课文·桂花雨",
+      "domain": "识字写字",
+      "type": "conceptual",
+      "description": "读准容易读错的字，不按半边乱猜。口语交际「制定班级公约」要把约定写具体，让大家做得到，不能只写「要团结」三个字。",
+      "masteryCriteria": [
+        "能分辨形近字和同音字",
+        "能按偏旁和结构识记生字"
+      ],
+      "diagnosticQuestion": {
+        "question": "「傍晚」的「傍」读哪一个？",
+        "answer": "bàng"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.SZ.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p326",
+          "name": "习作：我的心爱之物",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p328": {
+      "id": "cnc_p328",
+      "subject": "chinese",
+      "name": "阅读《冀中的地道战》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第2单元 课文·冀中的地道战",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂冀中平原的地道：能藏、能走、能打，还有迷惑洞、气孔这些机关。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "地道战主要发生在哪里？",
+        "answer": "冀中平原"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p327",
+          "name": "语文园地一·易读错的字音",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p329": {
+      "id": "cnc_p329",
+      "subject": "chinese",
+      "name": "阅读《将相和》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第2单元 课文·冀中的地道战",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "能按完璧归赵、渑池之会、负荆请罪说出蔺相如和廉颇的故事。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "蔺相如带着和氏璧到秦国，后来璧怎样了？",
+        "answer": "被他派人送回了赵国"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p328",
+          "name": "阅读《冀中的地道战》",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p330": {
+      "id": "cnc_p330",
+      "subject": "chinese",
+      "name": "阅读《什么比猎豹的速度更快》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第2单元 课文·冀中的地道战",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂这篇说明文用比较来写速度：猎豹很快，可是还有游隼、飞机、火箭、流星体，最快的是光。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "课文拿猎豹开头，是为了说明什么？",
+        "answer": "猎豹已经很快，后面还有更快的"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p329",
+          "name": "阅读《将相和》",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p331": {
+      "id": "cnc_p331",
+      "subject": "chinese",
+      "name": "阅读《“诺曼底号”遇难记》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第2单元 课文·冀中的地道战",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂雨果写的哈尔威船长：船被撞伤后命令妇女先走，自己留在舰桥，与船同沉。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "《“诺曼底号”遇难记》的作者是谁？",
+        "answer": "雨果"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p330",
+          "name": "阅读《什么比猎豹的速度更快》",
+          "strength": "soft"
+        },
+        {
+          "id": "cnc_p329",
+          "name": "阅读《将相和》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p332": {
+      "id": "cnc_p332",
+      "subject": "chinese",
+      "name": "习作：“漫画”老师",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第2单元 课文·冀中的地道战",
+      "domain": "习作基础",
+      "type": "application",
+      "description": "抓住一位老师最明显的特点来写，用一件具体的事，而不是空话。题目里的「漫画」是说特点要突出，不是真的去画一幅漫画。",
+      "masteryCriteria": [
+        "能按要求把话写完整",
+        "能判断哪一句更符合题目"
+      ],
+      "diagnosticQuestion": {
+        "question": "「漫画」老师，哪一句抓住了特点？",
+        "answer": "她讲到兴奋处，粉笔一挥，袖口上总会多一道白印"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.XZ.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p331",
+          "name": "阅读《“诺曼底号”遇难记》",
+          "strength": "soft"
+        },
+        {
+          "id": "cnc_p329",
+          "name": "阅读《将相和》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p333": {
+      "id": "cnc_p333",
+      "subject": "chinese",
+      "name": "语文园地二·多音字：强、鲜、弹、模",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第2单元 课文·冀中的地道战",
+      "domain": "识字写字",
+      "type": "conceptual",
+      "description": "能按词读准强、鲜、弹、模，不把不常用的那个音漏掉。",
+      "masteryCriteria": [
+        "能分辨形近字和同音字",
+        "能按偏旁和结构识记生字"
+      ],
+      "diagnosticQuestion": {
+        "question": "「勉强」的「强」读哪一个？",
+        "answer": "qiǎng"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.SZ.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p332",
+          "name": "习作：“漫画”老师",
+          "strength": "soft"
+        },
+        {
+          "id": "cnc_p327",
+          "name": "语文园地一·易读错的字音",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p334": {
+      "id": "cnc_p334",
+      "subject": "chinese",
+      "name": "语文园地二·成语运用",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第2单元 课文·冀中的地道战",
+      "domain": "词语",
+      "type": "conceptual",
+      "description": "能按语境选择成语，分清意思相反或容易用反的四字词语。",
+      "masteryCriteria": [
+        "能理解词语在句子里的意思",
+        "能选出搭配恰当的词语"
+      ],
+      "diagnosticQuestion": {
+        "question": "做事有始有终，可以用哪一个词语？",
+        "answer": "坚持不懈"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.CY.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p333",
+          "name": "语文园地二·多音字：强、鲜、弹、模",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p335": {
+      "id": "cnc_p335",
+      "subject": "chinese",
+      "name": "阅读《猎人海力布》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第3单元 民间故事·猎人海力布",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂海力布为了让乡亲躲开灾难，说出秘密，自己变成了石头。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "海力布救下的小白蛇是谁？",
+        "answer": "龙王的女儿"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p334",
+          "name": "语文园地二·成语运用",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p336": {
+      "id": "cnc_p336",
+      "subject": "chinese",
+      "name": "阅读《牛郎织女》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第3单元 民间故事·猎人海力布",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂牛郎和织女被银河隔开，七月初七由喜鹊搭桥相会。《牛郎织女（一）（二）》合为一个 topic。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "老牛在牛郎成亲这件事里做了什么？",
+        "answer": "告诉他织女要下凡，让他去取织女的纱衣"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p335",
+          "name": "阅读《猎人海力布》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p337": {
+      "id": "cnc_p337",
+      "subject": "chinese",
+      "name": "语文园地三·习作：故事新编",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第3单元 民间故事·猎人海力布",
+      "domain": "习作基础",
+      "type": "procedural",
+      "description": "故事新编要借用读过的民间故事人物，写出新的情节，不能把原来的道理写反，也不能一字不改地抄课文。口语交际「讲民间故事」要把时间、地点和主要情节讲清楚，让人听得下去。",
+      "masteryCriteria": [
+        "能按要求把话写完整",
+        "能判断哪一句更符合题目"
+      ],
+      "diagnosticQuestion": {
+        "question": "哪一种是故事新编？",
+        "answer": "海力布变成石头以后，乡亲每年回来看他，又发生了一件新事"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.XZ.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p336",
+          "name": "阅读《牛郎织女》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p338": {
+      "id": "cnc_p338",
+      "subject": "chinese",
+      "name": "快乐读书吧：从前有座山",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第3单元 民间故事·猎人海力布",
+      "domain": "阅读理解",
+      "type": "conceptual",
+      "description": "这次读书吧读中国民间故事。开头常常是「从前有座山」，里面是老百姓口头传下来的愿望和情感，不要把它们当成科学实验的记录。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "「从前有座山」主要读哪一类书？",
+        "answer": "中国民间故事，比如海力布、牛郎织女这一类"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p337",
+          "name": "语文园地三·习作：故事新编",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p339": {
+      "id": "cnc_p339",
+      "subject": "chinese",
+      "name": "古诗《示儿》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第4单元 古诗·示儿",
+      "domain": "古诗文积累",
+      "type": "conceptual",
+      "description": "背诵陆游《示儿》，记住九州同、乃翁，不把字改掉。",
+      "masteryCriteria": [
+        "能背出本册要求积累的诗句",
+        "能分清作者和诗句，不把字句记错"
+      ],
+      "diagnosticQuestion": {
+        "question": "「死去元知万事空」的下一句是哪一句？",
+        "answer": "但悲不见九州同"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.GS.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p338",
+          "name": "快乐读书吧：从前有座山",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p340": {
+      "id": "cnc_p340",
+      "subject": "chinese",
+      "name": "古诗《题临安邸》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第4单元 古诗·示儿",
+      "domain": "古诗文积累",
+      "type": "conceptual",
+      "description": "背诵林升《题临安邸》，分清杭州和汴州，也不要把句子装进《示儿》。",
+      "masteryCriteria": [
+        "能背出本册要求积累的诗句",
+        "能分清作者和诗句，不把字句记错"
+      ],
+      "diagnosticQuestion": {
+        "question": "「山外青山楼外楼」的下一句是哪一句？",
+        "answer": "西湖歌舞几时休"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.GS.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p339",
+          "name": "古诗《示儿》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p341": {
+      "id": "cnc_p341",
+      "subject": "chinese",
+      "name": "古诗《己亥杂诗》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第4单元 古诗·示儿",
+      "domain": "古诗文积累",
+      "type": "conceptual",
+      "description": "背诵龚自珍《己亥杂诗》（九州生气恃风雷），记住万马齐喑和不拘一格。",
+      "masteryCriteria": [
+        "能背出本册要求积累的诗句",
+        "能分清作者和诗句，不把字句记错"
+      ],
+      "diagnosticQuestion": {
+        "question": "「九州生气恃风雷」的下一句是哪一句？",
+        "answer": "万马齐喑究可哀"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.GS.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p340",
+          "name": "古诗《题临安邸》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p342": {
+      "id": "cnc_p342",
+      "subject": "chinese",
+      "name": "阅读《少年中国说》节选",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第4单元 古诗·示儿",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂梁启超《少年中国说》里少年和国家的关系，不把作者记成别人。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "「少年智则国智」的下一句是哪一句？",
+        "answer": "少年富则国富"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p341",
+          "name": "古诗《己亥杂诗》",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p343": {
+      "id": "cnc_p343",
+      "subject": "chinese",
+      "name": "阅读《圆明园的毁灭》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第4单元 古诗·示儿",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂圆明园的布局与文物，以及它被毁灭是不可估量的损失。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "圆明园里有怎样的建筑？",
+        "answer": "既有金碧辉煌的殿堂，也有山乡村野，还有西洋景观"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p342",
+          "name": "阅读《少年中国说》节选",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p344": {
+      "id": "cnc_p344",
+      "subject": "chinese",
+      "name": "阅读《梅兰芳蓄须明志》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第4单元 古诗·示儿",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂京剧表演艺术家梅兰芳在抗日战争时期留起胡须、拒绝为侵略者演戏，宁可卖房、装病，也不登台。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "梅兰芳是做什么的？平时为什么不能留胡子？",
+        "answer": "京剧表演艺术家，演的是旦角，留了胡子就没法扮女子"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p343",
+          "name": "阅读《圆明园的毁灭》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p345": {
+      "id": "cnc_p345",
+      "subject": "chinese",
+      "name": "语文园地四·联系上下文理解词语",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第4单元 古诗·示儿",
+      "domain": "词语",
+      "type": "conceptual",
+      "description": "能联系课文推想不可估量、众星拱月、玲珑剔透的意思。习作「二十年后的家乡」要写出变化后的具体样子，不能只写「家乡变好了」。",
+      "masteryCriteria": [
+        "能理解词语在句子里的意思",
+        "能选出搭配恰当的词语"
+      ],
+      "diagnosticQuestion": {
+        "question": "「不可估量的损失」里，「估量」是什么意思？",
+        "answer": "估计损失有多大"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.CY.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p344",
+          "name": "阅读《梅兰芳蓄须明志》",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p346": {
+      "id": "cnc_p346",
+      "subject": "chinese",
+      "name": "阅读《太阳》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第5单元 课文·太阳",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂这篇说明文：太阳离我们很远、温度极高，和人类的关系非常密切。本单元没有语文园地。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "课文先从哪几方面介绍太阳本身？",
+        "answer": "距离远、体积大、温度高"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p345",
+          "name": "语文园地四·联系上下文理解词语",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p347": {
+      "id": "cnc_p347",
+      "subject": "chinese",
+      "name": "阅读《金字塔》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第5单元 课文·太阳",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂这篇说明文介绍埃及金字塔：那是古代法老的陵墓，规模很大，建造不易。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "金字塔主要在哪个国家？是做什么用的？",
+        "answer": "在埃及，是古代法老的陵墓"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p346",
+          "name": "阅读《太阳》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p348": {
+      "id": "cnc_p348",
+      "subject": "chinese",
+      "name": "习作：介绍一种事物",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第5单元 课文·太阳",
+      "domain": "习作基础",
+      "type": "application",
+      "description": "介绍一种事物，要分几个方面写清楚。例文《鲸》从大小、种类、吃食和生活习性来写；《风向袋的制作》按步骤写出材料和做法。两篇都是例子，不单独立成课文。本单元没有语文园地。",
+      "masteryCriteria": [
+        "能按要求把话写完整",
+        "能判断哪一句更符合题目"
+      ],
+      "diagnosticQuestion": {
+        "question": "介绍鲸，哪一句写出了它不是鱼？",
+        "answer": "鲸用肺呼吸，是哺乳动物，不是用鳃的鱼"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.XZ.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p347",
+          "name": "阅读《金字塔》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p349": {
+      "id": "cnc_p349",
+      "subject": "chinese",
+      "name": "阅读《慈母情深》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 课文·慈母情深",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂梁晓声写母亲在噪声很大的车间里干活，仍给「我」钱去买书。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "《慈母情深》的作者是谁？",
+        "answer": "梁晓声"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p348",
+          "name": "习作：介绍一种事物",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p350": {
+      "id": "cnc_p350",
+      "subject": "chinese",
+      "name": "阅读《父爱之舟》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 课文·慈母情深",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂吴冠中用姑爹的小渔船，写出父亲为求学付出的那些钱和夜路。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "《父爱之舟》的作者是谁？",
+        "answer": "吴冠中"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p349",
+          "name": "阅读《慈母情深》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p351": {
+      "id": "cnc_p351",
+      "subject": "chinese",
+      "name": "阅读《航天员写给孩子的信》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 课文·慈母情深",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂航天员刘洋在神舟十四号出征前写给孩子的信：既是妈妈，也是军人；孩子是铠甲，也是软肋。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "这封信是谁写给谁的？",
+        "answer": "航天员刘洋写给自己的孩子"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p350",
+          "name": "阅读《父爱之舟》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p352": {
+      "id": "cnc_p352",
+      "subject": "chinese",
+      "name": "习作：我想对您说",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 课文·慈母情深",
+      "domain": "习作基础",
+      "type": "application",
+      "description": "给父母或其他长辈写一段话，把想说的事和当时的心情写具体。可以感谢、可以道歉，也可以讲一件一直没说出口的事，不能只写「谢谢您」。",
+      "masteryCriteria": [
+        "能按要求把话写完整",
+        "能判断哪一句更符合题目"
+      ],
+      "diagnosticQuestion": {
+        "question": "哪一段更像「我想对您说」？",
+        "answer": "妈，那次您在车间把钱塞给我，我到现在还记得纸币边是热的"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.XZ.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p351",
+          "name": "阅读《航天员写给孩子的信》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p353": {
+      "id": "cnc_p353",
+      "subject": "chinese",
+      "name": "语文园地六·形近字：戴、载、裁",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 课文·慈母情深",
+      "domain": "识字写字",
+      "type": "conceptual",
+      "description": "能按意思选用戴、载、裁，不看半边就写错。口语交际「父母之爱」要结合本单元的课文，说出自己体会到的爱，不要只重复「父母很爱我」。",
+      "masteryCriteria": [
+        "能分辨形近字和同音字",
+        "能按偏旁和结构识记生字"
+      ],
+      "diagnosticQuestion": {
+        "question": "「____帽子」横线处该写哪一个？",
+        "answer": "戴"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.SZ.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p352",
+          "name": "习作：我想对您说",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p354": {
+      "id": "cnc_p354",
+      "subject": "chinese",
+      "name": "古诗《山居秋暝》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第7单元 古诗·山居秋暝",
+      "domain": "古诗文积累",
+      "type": "conceptual",
+      "description": "背诵王维《山居秋暝》，记住空山、清泉和浣女，不和夜泊的句子串起来。",
+      "masteryCriteria": [
+        "能背出本册要求积累的诗句",
+        "能分清作者和诗句，不把字句记错"
+      ],
+      "diagnosticQuestion": {
+        "question": "「空山新雨后」的下一句是哪一句？",
+        "answer": "天气晚来秋"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.GS.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p353",
+          "name": "语文园地六·形近字：戴、载、裁",
+          "strength": "soft"
+        },
+        {
+          "id": "cnc_p341",
+          "name": "古诗《己亥杂诗》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p355": {
+      "id": "cnc_p355",
+      "subject": "chinese",
+      "name": "古诗《枫桥夜泊》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第7单元 古诗·山居秋暝",
+      "domain": "古诗文积累",
+      "type": "conceptual",
+      "description": "背诵张继《枫桥夜泊》，记住渔火、夜半和客船，不把字改掉。",
+      "masteryCriteria": [
+        "能背出本册要求积累的诗句",
+        "能分清作者和诗句，不把字句记错"
+      ],
+      "diagnosticQuestion": {
+        "question": "「月落乌啼霜满天」的下一句是哪一句？",
+        "answer": "江枫渔火对愁眠"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.GS.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p354",
+          "name": "古诗《山居秋暝》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p356": {
+      "id": "cnc_p356",
+      "subject": "chinese",
+      "name": "古诗《早春呈水部张十八员外》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第7单元 古诗·山居秋暝",
+      "domain": "古诗文积累",
+      "type": "conceptual",
+      "description": "背诵韩愈这首写早春的诗，记住润如酥、近却无，不和秋暝、夜泊串句。",
+      "masteryCriteria": [
+        "能背出本册要求积累的诗句",
+        "能分清作者和诗句，不把字句记错"
+      ],
+      "diagnosticQuestion": {
+        "question": "「天街小雨润如酥」的下一句是哪一句？",
+        "answer": "草色遥看近却无"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.GS.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p355",
+          "name": "古诗《枫桥夜泊》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p357": {
+      "id": "cnc_p357",
+      "subject": "chinese",
+      "name": "阅读《第一场雪》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第7单元 古诗·山居秋暝",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂峻青写胶东的一场大雪：下雪时是动态，雪后是静态，这场雪对麦子有好处。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "《第一场雪》的作者是谁？写的是哪里的雪？",
+        "answer": "峻青。写的是胶东一带"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p356",
+          "name": "古诗《早春呈水部张十八员外》",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p358": {
+      "id": "cnc_p358",
+      "subject": "chinese",
+      "name": "阅读《白鹭》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第7单元 古诗·山居秋暝",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂郭沫若笔下的白鹭色素、身段都恰好，本身就像一首诗。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "《白鹭》的作者是谁？",
+        "answer": "郭沫若"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p357",
+          "name": "阅读《第一场雪》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p359": {
+      "id": "cnc_p359",
+      "subject": "chinese",
+      "name": "语文园地七·修改病句",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第7单元 古诗·山居秋暝",
+      "domain": "句子",
+      "type": "procedural",
+      "description": "能找出搭配不当和前后重复的毛病，并选出改对的句子。习作「我最喜爱的季节」要把这个季节的景物和自己的感受写具体，不能只写「我喜欢春天」。",
+      "masteryCriteria": [
+        "能把句子写通顺",
+        "能按要求选用或修改句子"
+      ],
+      "diagnosticQuestion": {
+        "question": "哪一句没有毛病？",
+        "answer": "小鸟在树上唱歌。"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.JZ.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p358",
+          "name": "阅读《白鹭》",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p360": {
+      "id": "cnc_p360",
+      "subject": "chinese",
+      "name": "阅读《古人谈读书》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第8单元 课文·古人谈读书",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂三则短文：论语里的敏而好学，朱熹的心到、眼到、口到，曾国藩的有志、有识、有恒。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "「敏而好学，不耻下问」出自哪一部书？是什么意思？",
+        "answer": "《论语》。聪明好学，不以向不如自己的人请教为耻"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.02",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p359",
+          "name": "语文园地七·修改病句",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p361": {
+      "id": "cnc_p361",
+      "subject": "chinese",
+      "name": "阅读《忆读书》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第8单元 课文·古人谈读书",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂冰心回忆自己从小读书：读书好，多读书，读好书。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "《忆读书》的作者是谁？",
+        "answer": "冰心"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p360",
+          "name": "阅读《古人谈读书》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p362": {
+      "id": "cnc_p362",
+      "subject": "chinese",
+      "name": "阅读《走遍天下书为侣》",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第8单元 课文·古人谈读书",
+      "domain": "阅读理解",
+      "type": "reasoning",
+      "description": "读懂尤安·艾肯：如果只能带一样东西去荒岛，她要带书；一本书可以反复读，像一位不会厌烦的朋友。",
+      "masteryCriteria": [
+        "能根据短文选出和文字一致的信息",
+        "能说出故事或短文的主要意思"
+      ],
+      "diagnosticQuestion": {
+        "question": "《走遍天下书为侣》的作者是谁？",
+        "answer": "尤安·艾肯"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.YD.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p361",
+          "name": "阅读《忆读书》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnc_p363": {
+      "id": "cnc_p363",
+      "subject": "chinese",
+      "name": "语文园地八·习作：推荐一本书",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第8单元 课文·古人谈读书",
+      "domain": "习作基础",
+      "type": "procedural",
+      "description": "推荐一本书，要写出书名、大概写了什么、哪一处最打动你、为什么值得读。不能只写「这本书很好」。",
+      "masteryCriteria": [
+        "能按要求把话写完整",
+        "能判断哪一句更符合题目"
+      ],
+      "diagnosticQuestion": {
+        "question": "哪一段更像在推荐一本书？",
+        "answer": "《忆读书》写冰心从小读书的经历，读了会想自己也去找一本真正喜欢的书"
+      },
+      "standards": [
+        {
+          "id": "ccs-2022:3.XZ.01",
+          "confidence": "inferred",
+          "note": "统编版该册的常见教学内容。条目是公开转述，不是逐页核对的原文。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnc_p362",
+          "name": "阅读《走遍天下书为侣》",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p108": {
+      "id": "cne_p108",
+      "subject": "english",
+      "name": "开头辅音连缀 bl、cl、fl",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第1单元 Different friends",
+      "domain": "语音",
+      "type": "procedural",
+      "description": "能分辨 black、class、floor、blue 开头的辅音连缀。",
+      "masteryCriteria": [
+        "能根据字母或读音选出正确的一项",
+        "能把字母、发音和例词对上"
+      ],
+      "diagnosticQuestion": {
+        "question": "哪个单词以 bl 开头？",
+        "answer": "black"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.PH.01",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p109": {
+      "id": "cne_p109",
+      "subject": "english",
+      "name": "性格和外貌",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第1单元 Different friends",
+      "domain": "词汇",
+      "type": "conceptual",
+      "description": "认读 old、young、kind 和 strict。",
+      "masteryCriteria": [
+        "能选出单词的中文意思",
+        "能根据中文选出英文单词"
+      ],
+      "diagnosticQuestion": {
+        "question": "哪个单词的意思是「年老的」？",
+        "answer": "old"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.VO.01",
+          "confidence": "inferred",
+          "note": "人教 PEP 该单元的主题词。课标不逐词列出，词表和册次待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p108",
+          "name": "开头辅音连缀 bl、cl、fl",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p110": {
+      "id": "cne_p110",
+      "subject": "english",
+      "name": "What is he like",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第1单元 Different friends",
+      "domain": "语法",
+      "type": "procedural",
+      "description": "用 What is he like? 询问人的性格，而不是询问他喜欢什么。",
+      "masteryCriteria": [
+        "能选出语法正确的词或句子",
+        "能在句子里用对这个句型"
+      ],
+      "diagnosticQuestion": {
+        "question": "What is he like? 这句是在问什么？",
+        "answer": "他是什么样的人"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:1.GR.05",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p109",
+          "name": "性格和外貌",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p111": {
+      "id": "cne_p111",
+      "subject": "english",
+      "name": "描述老师",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第1单元 Different friends",
+      "domain": "日常表达",
+      "type": "application",
+      "description": "用 He is 或 She is 描述老师的性格。",
+      "masteryCriteria": [
+        "能选出符合情境的英文句子",
+        "能读懂这个功能句在问什么或在说什么"
+      ],
+      "diagnosticQuestion": {
+        "question": "想说音乐老师很和蔼，应说哪一句？",
+        "answer": "The music teacher is kind."
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.FU.01",
+          "confidence": "inferred",
+          "note": "教材中的功能句。课标没有逐句列出，待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p110",
+          "name": "What is he like",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p112": {
+      "id": "cne_p112",
+      "subject": "english",
+      "name": "读懂老师介绍",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第1单元 Different friends",
+      "domain": "读写",
+      "type": "application",
+      "description": "读介绍老师的短文，找出性格。",
+      "masteryCriteria": [
+        "能根据短文选出与文字一致的信息",
+        "能选出和短文意思一致的句子"
+      ],
+      "diagnosticQuestion": {
+        "question": "读一读：Mr Li is our maths teacher. He is tall and strict. 李老师怎么样？",
+        "answer": "又高又严格"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.RW.01",
+          "confidence": "inferred",
+          "note": "用文字把图意或短文写进题干，考查认读和理解。册次待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p111",
+          "name": "描述老师",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p113": {
+      "id": "cne_p113",
+      "subject": "english",
+      "name": "星期",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第4单元 Healthy habits",
+      "domain": "词汇",
+      "type": "conceptual",
+      "description": "认读 Monday、Tuesday、Wednesday 和 Friday。",
+      "masteryCriteria": [
+        "能选出单词的中文意思",
+        "能根据中文选出英文单词"
+      ],
+      "diagnosticQuestion": {
+        "question": "哪个单词的意思是「星期一」？",
+        "answer": "Monday"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.VO.01",
+          "confidence": "inferred",
+          "note": "人教 PEP 该单元的主题词。课标不逐词列出，词表和册次待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p112",
+          "name": "读懂老师介绍",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p114": {
+      "id": "cne_p114",
+      "subject": "english",
+      "name": "have 与 on Mondays",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第4单元 Healthy habits",
+      "domain": "语法",
+      "type": "procedural",
+      "description": "用 I have 加课程，并用 on Mondays 表示在星期一。",
+      "masteryCriteria": [
+        "能选出语法正确的词或句子",
+        "能在句子里用对这个句型"
+      ],
+      "diagnosticQuestion": {
+        "question": "I ____ Chinese on Mondays. 横线上应填哪个词？",
+        "answer": "have"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.GR.04",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p113",
+          "name": "星期",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p115": {
+      "id": "cne_p115",
+      "subject": "english",
+      "name": "周末活动",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第4单元 Healthy habits",
+      "domain": "词汇",
+      "type": "conceptual",
+      "description": "认读 wash、watch、read 和 play。",
+      "masteryCriteria": [
+        "能选出单词的中文意思",
+        "能根据中文选出英文单词"
+      ],
+      "diagnosticQuestion": {
+        "question": "哪个单词的意思是「洗」？",
+        "answer": "wash"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.VO.01",
+          "confidence": "inferred",
+          "note": "人教 PEP 该单元的主题词。课标不逐词列出，词表和册次待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p114",
+          "name": "have 与 on Mondays",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p116": {
+      "id": "cne_p116",
+      "subject": "english",
+      "name": "用 often 谈论日常",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第4单元 Healthy habits",
+      "domain": "日常表达",
+      "type": "application",
+      "description": "用 often 和 on the weekend 谈论经常做的事。",
+      "masteryCriteria": [
+        "能选出符合情境的英文句子",
+        "能读懂这个功能句在问什么或在说什么"
+      ],
+      "diagnosticQuestion": {
+        "question": "想说自己星期六经常看书，应说哪一句？",
+        "answer": "I often read books on Saturdays."
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.FU.01",
+          "confidence": "inferred",
+          "note": "教材中的功能句。课标没有逐句列出，待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p115",
+          "name": "周末活动",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p117": {
+      "id": "cne_p117",
+      "subject": "english",
+      "name": "读懂一周课程",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第4单元 Healthy habits",
+      "domain": "读写",
+      "type": "application",
+      "description": "读课程句子，找出哪一天有什么课。",
+      "masteryCriteria": [
+        "能根据短文选出与文字一致的信息",
+        "能选出和短文意思一致的句子"
+      ],
+      "diagnosticQuestion": {
+        "question": "读一读：I have Chinese, English and maths on Mondays. 星期一有英语课吗？",
+        "answer": "有"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.RW.01",
+          "confidence": "inferred",
+          "note": "用文字把图意或短文写进题干，考查认读和理解。册次待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p116",
+          "name": "用 often 谈论日常",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p118": {
+      "id": "cne_p118",
+      "subject": "english",
+      "name": "餐食",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第5单元 Food we eat",
+      "domain": "词汇",
+      "type": "conceptual",
+      "description": "认读 tea、sandwich、salad 和 hamburger。",
+      "masteryCriteria": [
+        "能选出单词的中文意思",
+        "能根据中文选出英文单词"
+      ],
+      "diagnosticQuestion": {
+        "question": "哪个单词的意思是「茶」？",
+        "answer": "tea"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.VO.01",
+          "confidence": "inferred",
+          "note": "人教 PEP 该单元的主题词。课标不逐词列出，词表和册次待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p117",
+          "name": "读懂一周课程",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p119": {
+      "id": "cne_p119",
+      "subject": "english",
+      "name": "What would you like to eat",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第5单元 Food we eat",
+      "domain": "日常表达",
+      "type": "application",
+      "description": "用 What would you like to eat? 点餐。",
+      "masteryCriteria": [
+        "能选出符合情境的英文句子",
+        "能读懂这个功能句在问什么或在说什么"
+      ],
+      "diagnosticQuestion": {
+        "question": "想问对方想吃什么，应说哪一句？",
+        "answer": "What would you like to eat?"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.FU.01",
+          "confidence": "inferred",
+          "note": "教材中的功能句。课标没有逐句列出，待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p118",
+          "name": "餐食",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p120": {
+      "id": "cne_p120",
+      "subject": "english",
+      "name": "读懂点餐",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第5单元 Food we eat",
+      "domain": "读写",
+      "type": "application",
+      "description": "读点餐短文，找出每个人想吃什么。",
+      "masteryCriteria": [
+        "能根据短文选出与文字一致的信息",
+        "能选出和短文意思一致的句子"
+      ],
+      "diagnosticQuestion": {
+        "question": "读一读：Sarah would like a sandwich. Mike would like a hamburger. Sarah 想要什么？",
+        "answer": "三明治"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:1.RW.02",
+          "confidence": "inferred",
+          "note": "用文字把图意或短文写进题干，考查认读和理解。册次待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p119",
+          "name": "What would you like to eat",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p121": {
+      "id": "cne_p121",
+      "subject": "english",
+      "name": "能力动词",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第3单元 Work and play",
+      "domain": "词汇",
+      "type": "conceptual",
+      "description": "认读 sing、dance、draw 和 swim。",
+      "masteryCriteria": [
+        "能选出单词的中文意思",
+        "能根据中文选出英文单词"
+      ],
+      "diagnosticQuestion": {
+        "question": "哪个单词的意思是「唱歌」？",
+        "answer": "sing"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.VO.01",
+          "confidence": "inferred",
+          "note": "人教 PEP 该单元的主题词。课标不逐词列出，词表和册次待核。"
+        }
+      ],
+      "prerequisites": [],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p122": {
+      "id": "cne_p122",
+      "subject": "english",
+      "name": "can 表示能力",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第3单元 Work and play",
+      "domain": "语法",
+      "type": "procedural",
+      "description": "用 can 加动词原形表示会做某事。",
+      "masteryCriteria": [
+        "能选出语法正确的词或句子",
+        "能在句子里用对这个句型"
+      ],
+      "diagnosticQuestion": {
+        "question": "I ____ swim. 横线上应填哪个词？",
+        "answer": "can"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.GR.03",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p121",
+          "name": "能力动词",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p123": {
+      "id": "cne_p123",
+      "subject": "english",
+      "name": "谈论会做的事",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第3单元 Work and play",
+      "domain": "日常表达",
+      "type": "application",
+      "description": "用 What can you do? 询问对方会做什么。",
+      "masteryCriteria": [
+        "能选出符合情境的英文句子",
+        "能读懂这个功能句在问什么或在说什么"
+      ],
+      "diagnosticQuestion": {
+        "question": "想问对方会做什么，应说哪一句？",
+        "answer": "What can you do?"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.FU.01",
+          "confidence": "inferred",
+          "note": "教材中的功能句。课标没有逐句列出，待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p122",
+          "name": "can 表示能力",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p124": {
+      "id": "cne_p124",
+      "subject": "english",
+      "name": "读懂能力短文",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第3单元 Work and play",
+      "domain": "读写",
+      "type": "application",
+      "description": "读短文，找出谁会做什么。",
+      "masteryCriteria": [
+        "能根据短文选出与文字一致的信息",
+        "能选出和短文意思一致的句子"
+      ],
+      "diagnosticQuestion": {
+        "question": "读一读：John can swim. Amy can draw. 谁会游泳？",
+        "answer": "John"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.RW.01",
+          "confidence": "inferred",
+          "note": "用文字把图意或短文写进题干，考查认读和理解。册次待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p123",
+          "name": "谈论会做的事",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p125": {
+      "id": "cne_p125",
+      "subject": "english",
+      "name": "房间里的东西",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 Nature and us",
+      "domain": "词汇",
+      "type": "conceptual",
+      "description": "认读 bed、photo、plant 和 clock。",
+      "masteryCriteria": [
+        "能选出单词的中文意思",
+        "能根据中文选出英文单词"
+      ],
+      "diagnosticQuestion": {
+        "question": "哪个单词的意思是「床」？",
+        "answer": "bed"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.VO.01",
+          "confidence": "inferred",
+          "note": "人教 PEP 该单元的主题词。课标不逐词列出，词表和册次待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p124",
+          "name": "读懂能力短文",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p126": {
+      "id": "cne_p126",
+      "subject": "english",
+      "name": "There is 与 There are",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 Nature and us",
+      "domain": "语法",
+      "type": "procedural",
+      "description": "用 There is 接单数，用 There are 接复数，表示某处有什么。",
+      "masteryCriteria": [
+        "能选出语法正确的词或句子",
+        "能在句子里用对这个句型"
+      ],
+      "diagnosticQuestion": {
+        "question": "房间里有一张床，应选哪一句？",
+        "answer": "There is a bed."
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.GR.03",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p125",
+          "name": "房间里的东西",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p127": {
+      "id": "cne_p127",
+      "subject": "english",
+      "name": "描述自己的房间",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 Nature and us",
+      "domain": "日常表达",
+      "type": "application",
+      "description": "用 There is 和 There are 描述房间里有什么。",
+      "masteryCriteria": [
+        "能选出符合情境的英文句子",
+        "能读懂这个功能句在问什么或在说什么"
+      ],
+      "diagnosticQuestion": {
+        "question": "想说房间里有一张大床，应说哪一句？",
+        "answer": "There is a big bed."
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.FU.01",
+          "confidence": "inferred",
+          "note": "教材中的功能句。课标没有逐句列出，待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p126",
+          "name": "There is 与 There are",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p128": {
+      "id": "cne_p128",
+      "subject": "english",
+      "name": "读懂房间短文",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 Nature and us",
+      "domain": "读写",
+      "type": "application",
+      "description": "读房间短文，找出有什么。",
+      "masteryCriteria": [
+        "能根据短文选出与文字一致的信息",
+        "能选出和短文意思一致的句子"
+      ],
+      "diagnosticQuestion": {
+        "question": "读一读：There is a big bed and a clock. There are two plants. 床有几张？",
+        "answer": "1 张"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.RW.01",
+          "confidence": "inferred",
+          "note": "用文字把图意或短文写进题干，考查认读和理解。册次待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p127",
+          "name": "描述自己的房间",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 3,
+      "numericCount": 1,
+      "crossGrade": false
+    },
+    "cne_p129": {
+      "id": "cne_p129",
+      "subject": "english",
+      "name": "自然公园",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 Nature and us",
+      "domain": "词汇",
+      "type": "conceptual",
+      "description": "认读 river、lake、mountain 和 forest。",
+      "masteryCriteria": [
+        "能选出单词的中文意思",
+        "能根据中文选出英文单词"
+      ],
+      "diagnosticQuestion": {
+        "question": "哪个单词的意思是「河」？",
+        "answer": "river"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.VO.01",
+          "confidence": "inferred",
+          "note": "人教 PEP 该单元的主题词。课标不逐词列出，词表和册次待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p128",
+          "name": "读懂房间短文",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p130": {
+      "id": "cne_p130",
+      "subject": "english",
+      "name": "Is there 与 Are there",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 Nature and us",
+      "domain": "语法",
+      "type": "procedural",
+      "description": "把 There is 和 There are 改成疑问句，询问某处有没有。",
+      "masteryCriteria": [
+        "能选出语法正确的词或句子",
+        "能在句子里用对这个句型"
+      ],
+      "diagnosticQuestion": {
+        "question": "问「河里有鱼吗」，应选哪一句？",
+        "answer": "Are there any fish in the river?"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.GR.03",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p129",
+          "name": "自然公园",
+          "strength": "soft"
+        },
+        {
+          "id": "cne_p126",
+          "name": "There is 与 There are",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 3,
+      "numericCount": 1,
+      "crossGrade": false
+    },
+    "cne_p131": {
+      "id": "cne_p131",
+      "subject": "english",
+      "name": "谈论公园里有什么",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 Nature and us",
+      "domain": "日常表达",
+      "type": "application",
+      "description": "用 Is there 和 Are there 谈论自然公园。",
+      "masteryCriteria": [
+        "能选出符合情境的英文句子",
+        "能读懂这个功能句在问什么或在说什么"
+      ],
+      "diagnosticQuestion": {
+        "question": "想问公园里有没有湖，应说哪一句？",
+        "answer": "Is there a lake in the park?"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.FU.01",
+          "confidence": "inferred",
+          "note": "教材中的功能句。课标没有逐句列出，待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p130",
+          "name": "Is there 与 Are there",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p132": {
+      "id": "cne_p132",
+      "subject": "english",
+      "name": "读懂自然公园",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 Nature and us",
+      "domain": "读写",
+      "type": "application",
+      "description": "读公园短文，按文字判断有什么。",
+      "masteryCriteria": [
+        "能根据短文选出与文字一致的信息",
+        "能选出和短文意思一致的句子"
+      ],
+      "diagnosticQuestion": {
+        "question": "读一读：There is a lake in the park. There are some ducks on the lake. 湖上有什么？",
+        "answer": "一些鸭子"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.RW.01",
+          "confidence": "inferred",
+          "note": "用文字把图意或短文写进题干，考查认读和理解。册次待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p131",
+          "name": "谈论公园里有什么",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 3,
+      "numericCount": 1,
+      "crossGrade": false
+    },
+    "cne_p167": {
+      "id": "cne_p167",
+      "subject": "english",
+      "name": "爱好",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第3单元 Work and play",
+      "domain": "词汇",
+      "type": "conceptual",
+      "description": "认读 hobby、hiking、puzzle 和 dancing。",
+      "masteryCriteria": [
+        "能选出单词的中文意思",
+        "能根据中文选出英文单词"
+      ],
+      "diagnosticQuestion": {
+        "question": "哪个单词的意思是「爱好」？",
+        "answer": "hobby"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.VO.01",
+          "confidence": "inferred",
+          "note": "人教 PEP 该单元的主题词。课标不逐词列出，词表和册次待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p124",
+          "name": "读懂能力短文",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cne_p198": {
+      "id": "cne_p198",
+      "subject": "english",
+      "name": "ai 和 ay 的读音",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第1单元 Different friends",
+      "domain": "语音",
+      "type": "procedural",
+      "description": "拼读含 ai、ay 的单词，如 rain、day、play。",
+      "masteryCriteria": [
+        "能在选择题中选出正确的一项",
+        "能在新版教材单元语境中运用"
+      ],
+      "diagnosticQuestion": {
+        "question": "哪个单词含有和 day 中 ay 相同的读音？",
+        "answer": "rain"
+      },
+      "standards": [
+        {
+          "id": "ces-2022:2.PH.01",
+          "confidence": "inferred",
+          "note": "新版人教教材该单元的语言点，按最接近的课标条目对应，待核。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cne_p108",
+          "name": "开头辅音连缀 bl、cl、fl",
+          "strength": "soft"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 4,
+      "numericCount": 0,
+      "crossGrade": false
+    },
+    "cnm_p098": {
+      "id": "cnm_p098",
+      "subject": "math",
+      "name": "公顷和平方千米",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 多边形的面积",
+      "domain": "图形与几何",
+      "type": "procedural",
+      "description": "认识公顷、平方千米，知道 1 公顷＝10000 平方米、1 平方千米＝100 公顷。",
+      "masteryCriteria": [
+        "能说出 1 公顷等于 10000 平方米",
+        "能判断土地面积常用公顷"
+      ],
+      "diagnosticQuestion": {
+        "question": "公顷和平方千米是什么单位？",
+        "answer": "面积单位"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.GG.03",
+          "confidence": "inferred",
+          "note": "公顷、平方千米写在第三学段。现行教材在四年级上册，对应时按内容提前出现处理，待核。"
+        }
+      ],
+      "prerequisites": [],
+      "questionCount": 4,
+      "choiceCount": 1,
+      "numericCount": 3,
+      "crossGrade": false
+    },
+    "cnm_p132": {
+      "id": "cnm_p132",
+      "subject": "math",
+      "name": "小数乘整数",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第2单元 小数乘法",
+      "domain": "数与代数",
+      "type": "procedural",
+      "description": "会计算小数乘整数，先按整数乘法算，再点小数点。",
+      "masteryCriteria": [
+        "能按整数乘法算出积",
+        "能根据因数的小数位数点上小数点"
+      ],
+      "diagnosticQuestion": {
+        "question": "小数乘整数，积的小数位数怎样确定？",
+        "answer": "和小数因数的小数位数一样"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.NA.04",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [],
+      "questionCount": 4,
+      "choiceCount": 1,
+      "numericCount": 3,
+      "crossGrade": false
+    },
+    "cnm_p133": {
+      "id": "cnm_p133",
+      "subject": "math",
+      "name": "小数乘小数",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第2单元 小数乘法",
+      "domain": "数与代数",
+      "type": "procedural",
+      "description": "会计算小数乘小数，积的小数位数等于两个因数小数位数的和。",
+      "masteryCriteria": [
+        "能算出小数乘小数的积",
+        "能根据两个因数的小数位数确定积的小数点"
+      ],
+      "diagnosticQuestion": {
+        "question": "小数乘小数，积的小数位数等于什么？",
+        "answer": "两个因数小数位数的和"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.NA.04",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnm_p132",
+          "name": "小数乘整数",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 1,
+      "numericCount": 3,
+      "crossGrade": false
+    },
+    "cnm_p134": {
+      "id": "cnm_p134",
+      "subject": "math",
+      "name": "小数乘法的应用",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第2单元 小数乘法",
+      "domain": "数与代数",
+      "type": "application",
+      "description": "能用小数乘法解决单价、面积等实际问题。",
+      "masteryCriteria": [
+        "能判断用乘法求几个相同小数的和",
+        "能用小数写出得数"
+      ],
+      "diagnosticQuestion": {
+        "question": "每小时行 2.4 千米，行 3 小时。一共多少千米？（用小数作答）",
+        "answer": "7.2"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.NA.04",
+          "confidence": "exact"
+        },
+        {
+          "id": "cms-2022:2.NA.08",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnm_p133",
+          "name": "小数乘小数",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 0,
+      "numericCount": 4,
+      "crossGrade": false
+    },
+    "cnm_p135": {
+      "id": "cnm_p135",
+      "subject": "math",
+      "name": "积的近似数",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第8单元 复习与关联",
+      "domain": "数与代数",
+      "type": "application",
+      "description": "能先算出小数乘法的精确积，再按要求保留一定的小数位数。",
+      "masteryCriteria": [
+        "能算出小数乘法的积",
+        "能把积保留到指定的位数"
+      ],
+      "diagnosticQuestion": {
+        "question": "1.6 乘 2.4 的积，用四舍五入法保留一位小数是多少？（用小数作答）",
+        "answer": "3.8"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.NA.06",
+          "confidence": "inferred",
+          "note": "积的近似数是旧版五上小数乘法相关内容；2026秋正式目录已无独立单元，暂挂第8单元复习与关联，不删除（与四上移除优化不同）。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnm_p133",
+          "name": "小数乘小数",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 0,
+      "numericCount": 4,
+      "crossGrade": false
+    },
+    "cnm_p136": {
+      "id": "cnm_p136",
+      "subject": "math",
+      "name": "用有序数对确定位置",
+      "grade": 6,
+      "semester": "上",
+      "chapter": "六年级上册 第1单元 确定位置",
+      "domain": "图形与几何",
+      "type": "application",
+      "description": "会用有序数对表示方格纸上点的位置，先写列、再写行。",
+      "masteryCriteria": [
+        "能说出先写列再写行",
+        "能根据数对找到点"
+      ],
+      "diagnosticQuestion": {
+        "question": "有序数对先写什么？",
+        "answer": "先写列，再写行"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.GG.09",
+          "confidence": "exact",
+          "note": "新版目录作「用有序数对确定位置」。"
+        }
+      ],
+      "prerequisites": [],
+      "questionCount": 4,
+      "choiceCount": 2,
+      "numericCount": 2,
+      "crossGrade": true
+    },
+    "cnm_p137": {
+      "id": "cnm_p137",
+      "subject": "math",
+      "name": "除数是整数的小数除法",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第3单元 小数除法",
+      "domain": "数与代数",
+      "type": "procedural",
+      "description": "会计算小数除以整数，商的小数点要和被除数的小数点对齐。",
+      "masteryCriteria": [
+        "能计算一位小数除以整数",
+        "能把商写成小数"
+      ],
+      "diagnosticQuestion": {
+        "question": "小数除以整数，商的小数点要怎样？",
+        "answer": "和被除数的小数点对齐"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.NA.04",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnm_p133",
+          "name": "小数乘小数",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 1,
+      "numericCount": 3,
+      "crossGrade": false
+    },
+    "cnm_p138": {
+      "id": "cnm_p138",
+      "subject": "math",
+      "name": "一个数除以小数",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第3单元 小数除法",
+      "domain": "数与代数",
+      "type": "procedural",
+      "description": "会计算除数是小数的除法，先把除数变成整数再算。",
+      "masteryCriteria": [
+        "能把除数的小数点移动成整数",
+        "能算出一个数除以小数的商"
+      ],
+      "diagnosticQuestion": {
+        "question": "除数是小数时，应先怎样做再除？",
+        "answer": "把除数变成整数"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.NA.04",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnm_p137",
+          "name": "除数是整数的小数除法",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 1,
+      "numericCount": 3,
+      "crossGrade": false
+    },
+    "cnm_p139": {
+      "id": "cnm_p139",
+      "subject": "math",
+      "name": "小数除法的应用",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第3单元 小数除法",
+      "domain": "数与代数",
+      "type": "application",
+      "description": "能用小数除法求每份是多少或可以分成多少份。",
+      "masteryCriteria": [
+        "能判断平均分用除法",
+        "能用小数或整数写出商"
+      ],
+      "diagnosticQuestion": {
+        "question": "7.2 升果汁平均分给 8 人。每人多少升？（用小数作答）",
+        "answer": "0.9"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.NA.04",
+          "confidence": "exact"
+        },
+        {
+          "id": "cms-2022:2.NA.08",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnm_p138",
+          "name": "一个数除以小数",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 0,
+      "numericCount": 4,
+      "crossGrade": false
+    },
+    "cnm_p140": {
+      "id": "cnm_p140",
+      "subject": "math",
+      "name": "可能性",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第7单元 可能性",
+      "domain": "统计与概率",
+      "type": "conceptual",
+      "description": "能用一定、可能、不可能描述事件，感受随机现象的结果。",
+      "masteryCriteria": [
+        "能区分一定、可能和不可能",
+        "能举出一个可能发生的例子"
+      ],
+      "diagnosticQuestion": {
+        "question": "一定发生的事情，可能性怎样？",
+        "answer": "一定会发生"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.SP.06",
+          "confidence": "exact"
+        },
+        {
+          "id": "cms-2022:3.SP.07",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [],
+      "questionCount": 4,
+      "choiceCount": 3,
+      "numericCount": 1,
+      "crossGrade": false
+    },
+    "cnm_p141": {
+      "id": "cnm_p141",
+      "subject": "math",
+      "name": "可能性的大小",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第7单元 可能性",
+      "domain": "统计与概率",
+      "type": "reasoning",
+      "description": "能定性比较简单随机事件可能性的大小，知道数量越多通常可能性越大。",
+      "masteryCriteria": [
+        "能说出哪种结果的可能性更大",
+        "知道可能性相等时机会一样大"
+      ],
+      "diagnosticQuestion": {
+        "question": "两种结果的数量一样多时，可能性怎样？",
+        "answer": "两种结果的机会一样大"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.SP.07",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnm_p140",
+          "name": "可能性",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 2,
+      "numericCount": 2,
+      "crossGrade": false
+    },
+    "cnm_p142": {
+      "id": "cnm_p142",
+      "subject": "math",
+      "name": "用字母表示数",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第5单元 用字母表示数和数量关系",
+      "domain": "数与代数",
+      "type": "conceptual",
+      "description": "会用字母表示数、数量关系和运算律，知道字母可以表示变化的数。",
+      "masteryCriteria": [
+        "能说出字母表示一个可以变化的数",
+        "能把简单的数量关系写成含字母的式子"
+      ],
+      "diagnosticQuestion": {
+        "question": "用字母表示数时，字母表示什么？",
+        "answer": "一个可以变化的数"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.NA.07",
+          "confidence": "exact"
+        },
+        {
+          "id": "cms-2022:2.NA.04",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [],
+      "questionCount": 4,
+      "choiceCount": 2,
+      "numericCount": 2,
+      "crossGrade": false
+    },
+    "cnm_p143": {
+      "id": "cnm_p143",
+      "subject": "math",
+      "name": "方程的意义",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第8单元 复习与关联",
+      "domain": "数与代数",
+      "type": "conceptual",
+      "description": "知道方程是含有未知数的等式。",
+      "masteryCriteria": [
+        "能判断一个式子是不是方程",
+        "能说出方程里必须有未知数并且相等"
+      ],
+      "diagnosticQuestion": {
+        "question": "下面 4 个式子：①x＋3＝8　②5＋2＝7　③x－4＞1　④9－x＝2。其中是方程的有几个？",
+        "answer": "2"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.NA.05",
+          "confidence": "exact",
+          "note": "简易方程相关内容在2026秋五上正式目录中已删去或改为选学；暂挂第8单元复习与关联，不删除。"
+        },
+        {
+          "id": "cms-2022:3.NA.07",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnm_p142",
+          "name": "用字母表示数",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 2,
+      "numericCount": 2,
+      "crossGrade": false
+    },
+    "cnm_p144": {
+      "id": "cnm_p144",
+      "subject": "math",
+      "name": "等式的性质",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第5单元 用字母表示数和数量关系",
+      "domain": "数与代数",
+      "type": "reasoning",
+      "description": "知道等式两边同时加上或减去同一个数，左右仍然相等。",
+      "masteryCriteria": [
+        "能说出两边同时加上同一个数，相等关系不变",
+        "能用这个性质把未知数单独留在一边"
+      ],
+      "diagnosticQuestion": {
+        "question": "等式两边同时加上或减去同一个数，相等关系怎样？",
+        "answer": "相等关系不变"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.NA.05",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnm_p143",
+          "name": "方程的意义",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 2,
+      "numericCount": 2,
+      "crossGrade": false
+    },
+    "cnm_p145": {
+      "id": "cnm_p145",
+      "subject": "math",
+      "name": "解简易方程",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第8单元 复习与关联",
+      "domain": "数与代数",
+      "type": "procedural",
+      "description": "会解 ax±b＝c 和 x±a＝b 这类简易方程。",
+      "masteryCriteria": [
+        "能把未知数单独留在等式一边",
+        "能检验求出的解代回原方程"
+      ],
+      "diagnosticQuestion": {
+        "question": "解方程 x＋17＝40。x 是多少？",
+        "answer": "23"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.NA.05",
+          "confidence": "exact",
+          "note": "简易方程相关内容在2026秋五上正式目录中已删去或改为选学；暂挂第8单元复习与关联，不删除。"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnm_p144",
+          "name": "等式的性质",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 0,
+      "numericCount": 4,
+      "crossGrade": false
+    },
+    "cnm_p146": {
+      "id": "cnm_p146",
+      "subject": "math",
+      "name": "列方程解决实际问题",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第8单元 复习与关联",
+      "domain": "数与代数",
+      "type": "application",
+      "description": "能把「未知数和其他已知数的等量关系」列成方程并求解。",
+      "masteryCriteria": [
+        "能找出等量关系",
+        "能列出方程并求出未知数"
+      ],
+      "diagnosticQuestion": {
+        "question": "小明原来有 x 张邮票，又买了 18 张，现在一共有 50 张。下面哪个方程列得对？",
+        "answer": "x＋18＝50"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.NA.05",
+          "confidence": "exact",
+          "note": "简易方程相关内容在2026秋五上正式目录中已删去或改为选学；暂挂第8单元复习与关联，不删除。"
+        },
+        {
+          "id": "cms-2022:2.NA.08",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnm_p145",
+          "name": "解简易方程",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 1,
+      "numericCount": 3,
+      "crossGrade": false
+    },
+    "cnm_p147": {
+      "id": "cnm_p147",
+      "subject": "math",
+      "name": "平行四边形的面积",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 多边形的面积",
+      "domain": "图形与几何",
+      "type": "procedural",
+      "description": "会用底乘高计算平行四边形的面积。",
+      "masteryCriteria": [
+        "能指出底和对应的高",
+        "能用底×高求面积"
+      ],
+      "diagnosticQuestion": {
+        "question": "底 7 厘米、高 4 厘米的平行四边形，面积是多少平方厘米？",
+        "answer": "28"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.GG.03",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnm_p240",
+          "name": "平行四边形的底和高",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 0,
+      "numericCount": 4,
+      "crossGrade": false
+    },
+    "cnm_p148": {
+      "id": "cnm_p148",
+      "subject": "math",
+      "name": "三角形的面积",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 多边形的面积",
+      "domain": "图形与几何",
+      "type": "procedural",
+      "description": "会用底乘高除以 2 计算三角形的面积。",
+      "masteryCriteria": [
+        "能说出三角形面积是等底等高平行四边形的一半",
+        "能用底×高÷2 求面积"
+      ],
+      "diagnosticQuestion": {
+        "question": "底 8 厘米、高 5 厘米的三角形，面积是多少平方厘米？",
+        "answer": "20"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.GG.03",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnm_p147",
+          "name": "平行四边形的面积",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 0,
+      "numericCount": 4,
+      "crossGrade": false
+    },
+    "cnm_p149": {
+      "id": "cnm_p149",
+      "subject": "math",
+      "name": "梯形的面积",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 多边形的面积",
+      "domain": "图形与几何",
+      "type": "procedural",
+      "description": "会用（上底＋下底）×高÷2 计算梯形的面积。",
+      "masteryCriteria": [
+        "能指出上底、下底和高",
+        "能套用公式算出面积"
+      ],
+      "diagnosticQuestion": {
+        "question": "上底 2 厘米、下底 6 厘米、高 4 厘米的梯形，面积是多少平方厘米？",
+        "answer": "16"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.GG.03",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnm_p147",
+          "name": "平行四边形的面积",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 0,
+      "numericCount": 4,
+      "crossGrade": false
+    },
+    "cnm_p150": {
+      "id": "cnm_p150",
+      "subject": "math",
+      "name": "组合图形的面积",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 多边形的面积",
+      "domain": "图形与几何",
+      "type": "application",
+      "description": "能把简单组合图形分成学过的图形，再把面积相加或相减。",
+      "masteryCriteria": [
+        "能把组合图形分成三角形或长方形",
+        "能把分块面积合并"
+      ],
+      "diagnosticQuestion": {
+        "question": "一个组合图形分成两个长方形，面积分别是 12 平方厘米和 8 平方厘米。这个组合图形的面积是多少平方厘米？",
+        "answer": "20"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.GG.03",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [
+        {
+          "id": "cnm_p148",
+          "name": "三角形的面积",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p149",
+          "name": "梯形的面积",
+          "strength": "hard"
+        }
+      ],
+      "questionCount": 4,
+      "choiceCount": 0,
+      "numericCount": 4,
+      "crossGrade": false
+    },
+    "cnm_p151": {
+      "id": "cnm_p151",
+      "subject": "math",
+      "name": "植树问题",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第8单元 复习与关联",
+      "domain": "综合与实践",
+      "type": "reasoning",
+      "description": "能分清两端都种、只种一端时，间隔数和棵数的关系。",
+      "masteryCriteria": [
+        "能说出两端都种时棵数比间隔数多 1",
+        "能先分清是两端都种还是只种一端"
+      ],
+      "diagnosticQuestion": {
+        "question": "两端都种树时，棵数和间隔数是什么关系？",
+        "answer": "棵数比间隔数多 1"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.NA.06",
+          "confidence": "inferred",
+          "note": "植树问题是旧版五上数学广角；2026秋正式目录无数学广角，暂挂第8单元复习与关联，不删除（与四上移除优化不同）。"
+        }
+      ],
+      "prerequisites": [],
+      "questionCount": 4,
+      "choiceCount": 1,
+      "numericCount": 3,
+      "crossGrade": false
+    },
+    "cnm_p240": {
+      "id": "cnm_p240",
+      "subject": "math",
+      "name": "平行四边形的底和高",
+      "grade": 5,
+      "semester": "上",
+      "chapter": "五年级上册 第6单元 多边形的面积",
+      "domain": "图形与几何",
+      "type": "conceptual",
+      "description": "认识平行四边形的底和对应的高，会画高，知道同一条底上的高都相等，为学习面积做准备。",
+      "masteryCriteria": [
+        "能说出高是对边之间的垂直线段",
+        "能找到和底对应的高"
+      ],
+      "diagnosticQuestion": {
+        "question": "平行四边形的高是哪一种线段？",
+        "answer": "从一边上一点到对边的垂直线段"
+      },
+      "standards": [
+        {
+          "id": "cms-2022:3.GG.03",
+          "confidence": "exact"
+        }
+      ],
+      "prerequisites": [],
+      "questionCount": 4,
+      "choiceCount": 2,
+      "numericCount": 2,
+      "crossGrade": false
+    }
+  },
+  "subjects": {
+    "chinese": {
+      "topicCount": 41,
+      "questionCount": 164,
+      "choiceCount": 164,
+      "numericCount": 0,
+      "bookId": "cn-g5-v1"
+    },
+    "math": {
+      "topicCount": 22,
+      "questionCount": 88,
+      "choiceCount": 22,
+      "numericCount": 66,
+      "bookId": "ma-g5-v1"
+    },
+    "english": {
+      "topicCount": 27,
+      "questionCount": 108,
+      "choiceCount": 105,
+      "numericCount": 3,
+      "bookId": "en-g5-v1"
+    }
+  },
+  "counts": {
+    "topics": 90,
+    "questions": 360,
+    "choice": 291,
+    "numeric": 69
+  }
+}

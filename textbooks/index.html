@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#FBF4E4">
+  <meta name="description" content="五年级上册语文、数学、英语教材在线翻阅，配套闯关题库和题库后台。">
+  <title>教材中心 · 五年级上册</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="assets/textbooks.css">
+</head>
+<body class="library-page">
+  <header class="topbar">
+    <a class="brand" href="../index.html" aria-label="回到期中闯关局首页">
+      <span class="brand__mark" aria-hidden="true">📚</span>
+      <span class="brand__text">
+        <b>教材中心</b>
+        <small>五年级 · 上册</small>
+      </span>
+    </a>
+    <div class="topbar__tools">
+      <a class="top-link" href="../index.html">期中闯关</a>
+      <a class="top-link" href="../admin/">题库后台</a>
+    </div>
+  </header>
+
+  <main class="page library-main">
+    <section class="library-hero" aria-labelledby="library-title">
+      <div class="library-hero__copy">
+        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>配套教材 · 在线翻阅</p>
+        <h1 id="library-title">把课本<br><em>放在手边</em></h1>
+        <p class="library-hero__lead">语文、数学、英语五年级上册，打开就能翻。读到哪一页会自动记住，做题时随时回来对照课文和例题。</p>
+        <div class="library-hero__actions">
+          <a class="btn btn--primary btn--lg" href="#books">选一本开始读 <span class="btn__arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost btn--lg" href="../index.html">先去闯关</a>
+        </div>
+      </div>
+      <div class="library-hero__side" aria-hidden="true">
+        <div class="book-stack">
+          <span class="book-stack__item book-stack__item--1">语</span>
+          <span class="book-stack__item book-stack__item--2">数</span>
+          <span class="book-stack__item book-stack__item--3">英</span>
+        </div>
+        <p class="library-hero__tip">翻到哪页<br>记到哪页</p>
+      </div>
+    </section>
+
+    <section class="resume" id="resume" hidden aria-labelledby="resume-title">
+      <div class="resume__copy">
+        <p class="resume__eyebrow">上次读到</p>
+        <h2 id="resume-title">继续上次的进度</h2>
+        <p class="resume__meta" id="resume-meta"></p>
+      </div>
+      <a class="btn btn--primary" id="resume-link" href="#">继续阅读 →</a>
+    </section>
+
+    <section id="books" class="books-section" aria-labelledby="books-title">
+      <div class="section-head">
+        <h2 id="books-title">五年级上册 · 三科教材</h2>
+        <p>点击封面或按钮，进入在线翻页阅读</p>
+      </div>
+      <div class="book-grid" id="book-grid" aria-live="polite">
+        <p class="loading-note" id="book-loading">正在加载教材目录…</p>
+      </div>
+      <noscript>
+        <p class="loading-note">需要开启 JavaScript 才能加载教材目录。也可以直接前往国家中小学智慧教育平台阅读。</p>
+      </noscript>
+    </section>
+
+    <section class="taxonomy-bridge" id="taxonomy-bridge" hidden aria-labelledby="taxonomy-title">
+      <div class="section-head">
+        <h2 id="taxonomy-title">三科知识图谱</h2>
+        <p>来自 cn-math-taxonomy 的五年级知识点、先修关系和题库</p>
+      </div>
+      <div class="taxonomy-grid" id="taxonomy-grid"></div>
+      <p class="taxonomy-note" id="taxonomy-note">知识点、先修关系和题库来自 cn-math-taxonomy（CC BY-NC 4.0），仅限个人学习、教学和研究使用。阅读器里会按单元显示对应知识点，题库后台可以按单元导入选择题。</p>
+    </section>
+
+    <section class="how-read" aria-labelledby="how-read-title">
+      <div class="section-head">
+        <h2 id="how-read-title">这样读更顺</h2>
+        <p>教材、闯关、题库三件事连起来</p>
+      </div>
+      <ol class="read-steps">
+        <li>
+          <span class="read-steps__num" aria-hidden="true">1</span>
+          <div><b>先读单元</b><p>按目录跳到正在学的单元，课文、例题和单词表都在原书里。</p></div>
+        </li>
+        <li>
+          <span class="read-steps__num" aria-hidden="true">2</span>
+          <div><b>再做闯关</b><p>读完回到闯关局，用 10 道题检查这一单元掌握得怎么样。</p></div>
+        </li>
+        <li>
+          <span class="read-steps__num" aria-hidden="true">3</span>
+          <div><b>缺题就补</b><p>题库后台支持手动录题、程序出题和 AI 辅助，补完导出即可。</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="source-note" aria-labelledby="source-title">
+      <h2 id="source-title">教材来源与使用说明</h2>
+      <p id="source-text">教材 PDF 引用自公开归档项目，版权归原出版方所有。本项目不复制、不再分发教材文件，仅提供在线阅读入口，供个人学习使用。</p>
+      <p class="source-note__links">
+        <a id="source-link" href="https://github.com/TapXWorld/ChinaTextbook" target="_blank" rel="noopener noreferrer">查看公开归档项目 ↗</a>
+        <a id="official-link" href="https://basic.smartedu.cn/tchMaterial/" target="_blank" rel="noopener noreferrer">国家中小学智慧教育平台 ↗</a>
+      </p>
+      <p class="source-note__small">若页面里的 PDF 无法加载，通常是上游链接临时不可用；可以点上面的官方平台入口继续阅读。需要离线副本时，运行 <code>node scripts/fetch-textbooks.mjs</code> 把 PDF 下载到本机（不会提交到仓库）。</p>
+    </section>
+
+    <footer class="footer">
+      <p>教材中心 · 五年级上册 · 语文（统编版）、数学（人教版）、英语（PEP）</p>
+      <p class="footer__small"><a href="../index.html">期中闯关</a> · <a href="../admin/">题库后台</a> · 阅读进度只保存在当前浏览器。</p>
+    </footer>
+  </main>
+
+  <script src="assets/library.js"></script>
+</body>
+</html>

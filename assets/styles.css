@@ -703,6 +703,89 @@ a {
   transform: translateX(4px);
 }
 
+/* ---------- 首页 · 配套学习 ---------- */
+
+.study-hub {
+  margin-top: clamp(36px, 6vw, 62px);
+}
+
+.study-hub__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.hub-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  box-shadow: 6px 6px 0 rgba(35, 48, 59, 0.12);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.hub-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 9px 9px 0 rgba(35, 48, 59, 0.16);
+}
+
+.hub-card:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.hub-card--books {
+  background: linear-gradient(125deg, #fff6da, #ffe6b8);
+}
+
+.hub-card--admin {
+  background: linear-gradient(125deg, #eaf1ff, #dbe8ff);
+}
+
+.hub-card__icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  font-size: 1.4rem;
+  background: #fff;
+  border: 2.5px solid var(--ink);
+  border-radius: 14px;
+  box-shadow: 3px 3px 0 rgba(35, 48, 59, 0.16);
+}
+
+.hub-card__copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.hub-card__copy b {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.hub-card__copy span {
+  font-size: 0.76rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.hub-card__go {
+  flex: none;
+  font-size: 0.76rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
 /* ---------- 首页 · 玩法 / 页脚 ---------- */
 
 .how {
@@ -765,6 +848,37 @@ a {
 
 .footer__small {
   opacity: 0.85;
+}
+
+
+.footer a {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.local-bank-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 14px 0 0;
+  padding: 10px 14px;
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+  background: #fff8dc;
+  border: 2px solid rgba(35, 48, 59, 0.22);
+  border-radius: 12px;
+}
+
+.local-bank-note[hidden] {
+  display: none;
+}
+
+.local-bank-note .btn {
+  min-height: 30px;
+  padding: 3px 10px;
+  font-size: 0.7rem;
 }
 
 /* ---------- 答题页 ---------- */
@@ -896,6 +1010,37 @@ a {
   font-weight: 900;
   line-height: 1.55;
   white-space: pre-line;
+}
+
+.q-figure-wrap {
+  margin: 0 0 18px;
+}
+
+.q-figure {
+  margin: 0;
+  text-align: center;
+}
+
+.q-figure img {
+  display: block;
+  max-width: 100%;
+  max-height: min(38vh, 320px);
+  margin: 0 auto;
+  object-fit: contain;
+  background: #fff;
+  border: 2.5px solid var(--ink);
+  border-radius: 12px;
+  box-shadow: 4px 4px 0 rgba(35, 48, 59, 0.12);
+}
+
+.q-figure figcaption {
+  margin-top: 6px;
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+
+.review-card .q-figure img {
+  max-height: 220px;
 }
 
 .options {
@@ -1695,5 +1840,22 @@ a {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+
+@media (max-width: 760px) {
+  .study-hub__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hub-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .hub-card__go {
+    width: 100%;
+    padding-left: 62px;
   }
 }

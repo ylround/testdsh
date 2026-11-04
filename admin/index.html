@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#FBF4E4">
+  <meta name="description" content="五年级题库工作台：手动录题、程序生成、AI 辅助和题库导入导出。">
+  <title>题库工作台 · 五年级</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="assets/admin.css">
+</head>
+<body class="admin-page">
+  <header class="admin-top">
+    <a class="brand" href="../index.html" aria-label="回到期中闯关局首页">
+      <span class="brand__mark" aria-hidden="true">🛠️</span>
+      <span class="brand__text">
+        <b>题库工作台</b>
+        <small>五年级 · 本地后台</small>
+      </span>
+    </a>
+    <div class="admin-top__actions">
+      <span class="save-state" id="save-state">正在读取本地题库…</span>
+      <a class="top-link" href="../textbooks/">教材中心</a>
+      <a class="top-link" href="../index.html">去闯关</a>
+    </div>
+  </header>
+
+  <main class="page admin-main">
+    <section class="admin-hero" aria-labelledby="admin-title">
+      <div>
+        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>题库 · 录入与生成</p>
+        <h1 id="admin-title">把好题<br><em>攒进题库</em></h1>
+        <p class="admin-hero__lead">手动录题、按模板生成、AI 辅助和拍照配图，都在这里完成。题库保存在当前浏览器，导出后替换 <code>assets/questions.js</code> 即可发布。</p>
+      </div>
+      <div class="admin-stats" aria-label="题库统计">
+        <div class="stat-card stat-card--total"><b id="stat-total">0</b><span>总题数</span></div>
+        <div class="stat-card stat-card--chinese"><b id="stat-chinese">0</b><span>语文</span></div>
+        <div class="stat-card stat-card--math"><b id="stat-math">0</b><span>数学</span></div>
+        <div class="stat-card stat-card--english"><b id="stat-english">0</b><span>英语</span></div>
+        <div class="stat-card stat-card--local"><b id="stat-local">0</b><span>本次新增</span></div>
+      </div>
+    </section>
+
+    <div class="admin-note">
+      <b>这是本地后台。</b>题库写入浏览器的 IndexedDB，不会自动上传到服务器。新增或修改后，用「导入导出」里的按钮生成新的 <code>questions.js</code>，再提交到仓库；也可以先「应用到本机闯关」立即试玩。
+    </div>
+
+    <div class="admin-layout">
+      <nav class="admin-tabs" role="tablist" aria-label="题库后台功能">
+        <button type="button" class="admin-tab is-active" role="tab" aria-selected="true" aria-controls="panel-list" id="tab-list" data-tab="list"><span aria-hidden="true">☰</span> 题库列表</button>
+        <button type="button" class="admin-tab" role="tab" aria-selected="false" aria-controls="panel-form" id="tab-form" data-tab="form"><span aria-hidden="true">✎</span> 新增 / 编辑</button>
+        <button type="button" class="admin-tab" role="tab" aria-selected="false" aria-controls="panel-generate" id="tab-generate" data-tab="generate"><span aria-hidden="true">⚙</span> 程序生成</button>
+        <button type="button" class="admin-tab" role="tab" aria-selected="false" aria-controls="panel-ai" id="tab-ai" data-tab="ai"><span aria-hidden="true">✦</span> AI 辅助</button>
+        <button type="button" class="admin-tab" role="tab" aria-selected="false" aria-controls="panel-taxonomy" id="tab-taxonomy" data-tab="taxonomy"><span aria-hidden="true">🧭</span> 知识图谱题库</button>
+        <button type="button" class="admin-tab" role="tab" aria-selected="false" aria-controls="panel-io" id="tab-io" data-tab="io"><span aria-hidden="true">⇅</span> 导入导出</button>
+        <button type="button" class="admin-tab" role="tab" aria-selected="false" aria-controls="panel-settings" id="tab-settings" data-tab="settings"><span aria-hidden="true">⚒</span> 设置</button>
+      </nav>
+
+      <div class="admin-content">
+        <!-- 题库列表 -->
+        <section class="admin-panel is-active" id="panel-list" role="tabpanel" aria-labelledby="tab-list">
+          <div class="panel-head">
+            <div>
+              <h2>题库列表</h2>
+              <p>按科目、来源筛选，点「编辑」修改题目。</p>
+            </div>
+            <span class="panel-count" id="list-count">0 题</span>
+          </div>
+          <div class="list-toolbar">
+            <label class="field field--inline">
+              <span>科目</span>
+              <select id="list-subject">
+                <option value="">全部</option>
+                <option value="chinese">语文</option>
+                <option value="math">数学</option>
+                <option value="english">英语</option>
+              </select>
+            </label>
+            <label class="field field--inline">
+              <span>来源</span>
+              <select id="list-source">
+                <option value="">全部</option>
+                <option value="manual">手动录入</option>
+                <option value="generated">程序生成</option>
+                <option value="ai">AI 辅助</option>
+                <option value="photo">拍照配图</option>
+                <option value="taxonomy">知识图谱</option>
+              </select>
+            </label>
+            <label class="field field--search">
+              <span class="visually-hidden">搜索题目</span>
+              <input type="search" id="list-search" placeholder="搜索题干、知识点或题号…" autocomplete="off">
+            </label>
+          </div>
+          <div class="question-list" id="question-list" aria-live="polite"></div>
+          <div class="empty-state" id="list-empty" hidden>
+            <b>没有找到题目</b>
+            <p>换个筛选条件，或者去「新增 / 编辑」录一道题。</p>
+          </div>
+          <div class="pager" id="list-pager" hidden>
+            <button type="button" class="btn btn--ghost btn--sm" id="list-prev">← 上一页</button>
+            <span id="list-page">第 1 / 1 页</span>
+            <button type="button" class="btn btn--ghost btn--sm" id="list-next">下一页 →</button>
+          </div>
+        </section>
+
+        <!-- 新增/编辑 -->
+        <section class="admin-panel" id="panel-form" role="tabpanel" aria-labelledby="tab-form" hidden>
+          <div class="panel-head">
+            <div>
+              <h2 id="form-title">新增题目</h2>
+              <p>选择题 3–4 个选项（A/B/C 必填，D 可选）；图片会随题库导出，建议先压缩。</p>
+            </div>
+            <span class="panel-count" id="form-mode">新题</span>
+          </div>
+          <form class="question-form" id="question-form" novalidate>
+            <input type="hidden" id="form-id">
+            <div class="form-grid">
+              <label class="field">
+                <span>科目 <em>*</em></span>
+                <select id="form-subject" required>
+                  <option value="chinese">语文</option>
+                  <option value="math">数学</option>
+                  <option value="english">英语</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>知识点 <em>*</em></span>
+                <input type="text" id="form-point" list="point-options" placeholder="如：小数乘法、修辞手法" maxlength="30" required>
+                <datalist id="point-options"></datalist>
+              </label>
+              <label class="field">
+                <span>来源</span>
+                <select id="form-source">
+                  <option value="manual">手动录入</option>
+                  <option value="generated">程序生成</option>
+                  <option value="ai">AI 辅助</option>
+                  <option value="photo">拍照配图</option>
+                  <option value="taxonomy">知识图谱</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>题号</span>
+                <input type="text" id="form-id-display" readonly placeholder="保存时自动生成">
+              </label>
+            </div>
+
+            <label class="field">
+              <span>题干 <em>*</em></span>
+              <textarea id="form-question" rows="3" maxlength="500" placeholder="把题目完整地写在这里" required></textarea>
+            </label>
+
+            <div class="options-editor">
+              <p class="field-label">选项 <em>*</em> <small>至少 3 个，D 可留空；答案在右侧选择</small></p>
+              <div class="option-row"><span class="option-letter">A</span><input type="text" id="form-option-a" maxlength="120" placeholder="选项 A" required></div>
+              <div class="option-row"><span class="option-letter">B</span><input type="text" id="form-option-b" maxlength="120" placeholder="选项 B" required></div>
+              <div class="option-row"><span class="option-letter">C</span><input type="text" id="form-option-c" maxlength="120" placeholder="选项 C" required></div>
+              <div class="option-row"><span class="option-letter">D</span><input type="text" id="form-option-d" maxlength="120" placeholder="选项 D（可选）"></div>
+              <label class="field field--answer">
+                <span>正确答案</span>
+                <select id="form-answer">
+                  <option value="0">A</option>
+                  <option value="1">B</option>
+                  <option value="2">C</option>
+                  <option value="3">D</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="field">
+              <span>解析 <em>*</em></span>
+              <textarea id="form-explain" rows="3" maxlength="600" placeholder="为什么选这个答案？错项错在哪里？" required></textarea>
+            </label>
+
+            <div class="figure-editor">
+              <p class="field-label">配图 <small>可选；适合图形题、看图题</small></p>
+              <div class="figure-editor__row">
+                <label class="btn btn--ghost btn--sm figure-upload">
+                  选择图片 / 拍照
+                  <input type="file" id="form-figure" accept="image/*" capture="environment">
+                </label>
+                <button type="button" class="btn btn--ghost btn--sm" id="form-figure-clear" hidden>移除图片</button>
+                <span class="figure-editor__hint" id="figure-hint">支持 JPG / PNG / WebP，自动压缩到 1600px</span>
+              </div>
+              <div class="figure-preview" id="form-figure-preview" hidden>
+                <img id="form-figure-img" alt="题目配图预览">
+              </div>
+              <label class="field" id="alt-field" hidden>
+                <span>图片替代文字 <small>给读屏软件和图片加载失败时使用</small></span>
+                <input type="text" id="form-figure-alt" maxlength="120" placeholder="如：方格图，点 A 在第 3 列第 4 行">
+              </label>
+            </div>
+
+            <div class="form-error" id="form-error" role="alert" hidden></div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn--primary" id="form-save">保存题目</button>
+              <button type="button" class="btn btn--secondary" id="form-save-next">保存并继续录入</button>
+              <button type="button" class="btn btn--ghost" id="form-cancel" hidden>取消编辑</button>
+              <button type="button" class="btn btn--danger" id="form-delete" hidden>删除这道题</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- 程序生成 -->
+        <section class="admin-panel" id="panel-generate" role="tabpanel" aria-labelledby="tab-generate" hidden>
+          <div class="panel-head">
+            <div>
+              <h2>程序生成</h2>
+              <p>按模板随机出题，答案由程序计算；生成后仍可编辑再入库。</p>
+            </div>
+          </div>
+          <div class="generator-layout">
+            <div class="generator-controls">
+              <label class="field">
+                <span>题型</span>
+                <select id="generator-kind"></select>
+              </label>
+              <p class="generator-hint" id="generator-hint"></p>
+              <div class="generator-buttons">
+                <button type="button" class="btn btn--secondary" id="generate-preview">换一题</button>
+                <button type="button" class="btn btn--primary" id="generate-add">加入题库</button>
+                <button type="button" class="btn btn--ghost" id="generate-add-five">连续加入 5 题</button>
+              </div>
+              <p class="generator-note">生成器只覆盖数学：小数乘法、小数除法、简便运算和位置。语文、英语更适合手动录题或 AI 辅助。</p>
+            </div>
+            <div class="generator-stage" id="generate-stage" aria-live="polite">
+              <p class="placeholder-note">选一个题型，点「换一题」预览。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- AI 辅助 -->
+        <section class="admin-panel" id="panel-ai" role="tabpanel" aria-labelledby="tab-ai" hidden>
+          <div class="panel-head">
+            <div>
+              <h2>AI 辅助</h2>
+              <p>先生成提示词，复制到任意 AI 对话；配置 API 后也可以直接在这里生成。</p>
+            </div>
+          </div>
+          <div class="ai-grid">
+            <section class="ai-card">
+              <h3>1. 生成新题</h3>
+              <div class="form-grid">
+                <label class="field"><span>科目</span>
+                  <select id="ai-subject">
+                    <option value="chinese">语文</option>
+                    <option value="math">数学</option>
+                    <option value="english">英语</option>
+                  </select>
+                </label>
+                <label class="field"><span>知识点</span><input type="text" id="ai-point" placeholder="如：小数除法、古诗文" maxlength="30"></label>
+                <label class="field"><span>数量</span>
+                  <select id="ai-count">
+                    <option value="3">3 题</option>
+                    <option value="5" selected>5 题</option>
+                    <option value="8">8 题</option>
+                  </select>
+                </label>
+              </div>
+              <label class="field"><span>补充要求</span><textarea id="ai-extra" rows="2" placeholder="如：围绕第 3 单元，难度偏基础，不要计算器题"></textarea></label>
+              <div class="ai-actions">
+                <button type="button" class="btn btn--ghost" id="ai-copy-prompt">复制提示词</button>
+                <button type="button" class="btn btn--primary" id="ai-generate">调用 AI 生成</button>
+              </div>
+              <label class="field"><span>提示词</span><textarea id="ai-prompt" rows="7" readonly></textarea></label>
+              <p class="ai-status" id="ai-status"></p>
+            </section>
+
+            <section class="ai-card">
+              <h3>2. 粘贴 AI 结果</h3>
+              <label class="field"><span>AI 返回的 JSON</span><textarea id="ai-paste" rows="8" placeholder='{"questions":[{"point":"…","q":"…","options":["…","…","…","…"],"answer":0,"explain":"…"}]}'></textarea></label>
+              <div class="ai-actions">
+                <button type="button" class="btn btn--secondary" id="ai-parse-paste">解析并预览</button>
+              </div>
+              <p class="ai-status" id="ai-parse-status"></p>
+            </section>
+
+            <section class="ai-card ai-card--wide">
+              <h3>3. 拍照识图 <small>需要配置支持图片的模型</small></h3>
+              <p class="ai-card__desc">先拍照/选图，再让视觉模型把题目转成结构化 JSON；识别结果必须人工校对后才能入库。</p>
+              <div class="vision-row">
+                <label class="btn btn--ghost btn--sm figure-upload">
+                  选择图片 / 拍照
+                  <input type="file" id="vision-file" accept="image/*" capture="environment">
+                </label>
+                <button type="button" class="btn btn--primary btn--sm" id="vision-generate">识图并解析</button>
+                <span class="ai-status" id="vision-status"></span>
+              </div>
+              <div class="vision-preview" id="vision-preview" hidden><img id="vision-img" alt="待识别的题目照片"></div>
+            </section>
+
+            <section class="ai-card ai-card--wide">
+              <h3>4. 待入库预览</h3>
+              <div id="ai-result" class="preview-list"><p class="placeholder-note">生成或解析后，题目会出现在这里。</p></div>
+              <div class="ai-actions" id="ai-result-actions" hidden>
+                <button type="button" class="btn btn--primary" id="ai-add-all">全部加入题库</button>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- 知识图谱题库 -->
+        <section class="admin-panel" id="panel-taxonomy" role="tabpanel" aria-labelledby="tab-taxonomy" hidden>
+          <div class="panel-head">
+            <div>
+              <h2>知识图谱题库</h2>
+              <p>从 cn-math-taxonomy 导入三科五年级的选择题；数值题请到图谱诊断页练习。</p>
+            </div>
+            <span class="panel-count" id="tax-count">—</span>
+          </div>
+          <div class="tax-source-note">
+            <span>90 个知识点 · 360 道题（291 道选择 / 69 道数值），按单元筛选后导入。</span>
+            <a href="../cn-math-taxonomy/explore/?subject=chinese&grade=5" target="_blank" rel="noopener noreferrer">打开知识图谱 ↗</a>
+          </div>
+          <div class="list-toolbar tax-toolbar">
+            <label class="field field--inline">
+              <span>科目</span>
+              <select id="tax-subject">
+                <option value="chinese">语文</option>
+                <option value="math">数学</option>
+                <option value="english">英语</option>
+              </select>
+            </label>
+            <label class="field field--inline">
+              <span>单元</span>
+              <select id="tax-unit"><option value="">全部单元</option></select>
+            </label>
+            <label class="field field--inline">
+              <span>题型</span>
+              <select id="tax-type">
+                <option value="choice">选择题（可导入）</option>
+                <option value="numeric">数值题（诊断页练习）</option>
+                <option value="">全部</option>
+              </select>
+            </label>
+            <label class="field field--inline">
+              <span>难度</span>
+              <select id="tax-difficulty">
+                <option value="">全部</option>
+                <option value="basic">基础</option>
+                <option value="standard">标准</option>
+                <option value="challenge">挑战</option>
+                <option value="advanced">进阶</option>
+              </select>
+            </label>
+            <label class="field field--search">
+              <span class="visually-hidden">搜索知识图谱题目</span>
+              <input type="search" id="tax-search" placeholder="搜索题干、知识点…" autocomplete="off">
+            </label>
+          </div>
+          <div class="tax-actions">
+            <button type="button" class="btn btn--primary btn--sm" id="tax-import-all">导入当前筛选的选择题</button>
+            <span class="ai-status" id="tax-status"></span>
+          </div>
+          <div class="tax-list" id="tax-list" aria-live="polite">
+            <p class="placeholder-note">正在读取知识图谱数据…</p>
+          </div>
+        </section>
+
+        <!-- 导入导出 -->
+        <section class="admin-panel" id="panel-io" role="tabpanel" aria-labelledby="tab-io" hidden>
+          <div class="panel-head">
+            <div>
+              <h2>导入导出</h2>
+              <p>导出的 <code>questions.js</code> 与现有题库格式一致，可以直接替换仓库文件。</p>
+            </div>
+            <span class="panel-count" id="export-count">0 题</span>
+          </div>
+          <div class="io-grid">
+            <section class="io-card">
+              <h3>发布题库</h3>
+              <p>把当前本地题库导出为 <code>assets/questions.js</code>，替换仓库中的同名文件后提交即可。<b>导出前请先自检。</b></p>
+              <div class="io-actions">
+                <button type="button" class="btn btn--primary" id="export-js">下载 questions.js</button>
+                <button type="button" class="btn btn--secondary" id="copy-js">复制 questions.js</button>
+                <button type="button" class="btn btn--ghost" id="export-json">下载 JSON</button>
+                <button type="button" class="btn btn--ghost" id="copy-json">复制 JSON</button>
+              </div>
+              <p class="io-status" id="export-status"></p>
+              <div class="io-apply">
+                <button type="button" class="btn btn--primary" id="apply-local">应用到本机闯关</button>
+                <button type="button" class="btn btn--ghost" id="reset-bank">恢复默认题库</button>
+              </div>
+              <p class="io-status" id="apply-status"></p>
+            </section>
+
+            <section class="io-card">
+              <h3>导入题库</h3>
+              <p>支持 <code>questions.js</code>、JSON 文件，或直接粘贴 JSON。导入的是你选择的文件，请确认来源可信。</p>
+              <div class="io-actions">
+                <label class="btn btn--ghost btn--sm figure-upload">
+                  选择文件
+                  <input type="file" id="io-file" accept=".json,.js,application/json,text/javascript">
+                </label>
+                <button type="button" class="btn btn--secondary btn--sm" id="io-parse">解析并预览</button>
+              </div>
+              <label class="field"><span>或粘贴内容</span><textarea id="io-text" rows="7" placeholder="window.QUIZ_BANK = { … } 或纯 JSON"></textarea></label>
+              <p class="io-status" id="io-status"></p>
+              <div id="io-preview" class="preview-list"></div>
+              <div class="io-actions" id="io-import-actions" hidden>
+                <button type="button" class="btn btn--primary" id="io-merge">合并导入</button>
+                <button type="button" class="btn btn--danger" id="io-replace">替换题库</button>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- 设置 -->
+        <section class="admin-panel" id="panel-settings" role="tabpanel" aria-labelledby="tab-settings" hidden>
+          <div class="panel-head">
+            <div>
+              <h2>设置</h2>
+              <p>AI 调用是可选的。API Key 只保存在当前浏览器，不会写入导出的题库。</p>
+            </div>
+          </div>
+          <div class="settings-card">
+            <div class="provider-presets" role="group" aria-label="服务商预设">
+              <button type="button" class="btn btn--ghost btn--sm" data-provider="openai">OpenAI</button>
+              <button type="button" class="btn btn--ghost btn--sm" data-provider="deepseek">DeepSeek</button>
+              <button type="button" class="btn btn--ghost btn--sm" data-provider="dashscope">通义千问</button>
+              <button type="button" class="btn btn--ghost btn--sm" data-provider="zhipu">智谱</button>
+            </div>
+            <label class="field"><span>API 地址 <small>OpenAI 兼容的 chat/completions</small></span><input type="url" id="set-endpoint" placeholder="https://api.openai.com/v1/chat/completions"></label>
+            <div class="form-grid">
+              <label class="field"><span>文本模型</span><input type="text" id="set-model" placeholder="gpt-4o-mini"></label>
+              <label class="field"><span>视觉模型 <small>识图用，可留空</small></span><input type="text" id="set-vision-model" placeholder="gpt-4o-mini"></label>
+            </div>
+            <label class="field"><span>API Key</span><input type="password" id="set-key" placeholder="sk-…" autocomplete="off"></label>
+            <div class="form-actions">
+              <button type="button" class="btn btn--primary" id="save-settings">保存设置</button>
+              <button type="button" class="btn btn--ghost" id="clear-settings">清除 Key</button>
+            </div>
+            <p class="settings-note" id="settings-state"></p>
+            <div class="settings-warning">
+              <b>使用提醒</b>
+              <ul>
+                <li>浏览器直连第三方 AI 服务，部分服务可能因 CORS 或网络限制无法调用；调用失败时用「复制提示词」模式。</li>
+                <li>不要使用主账号的长期密钥；建议单独创建限额 Key，用完可清除。</li>
+                <li>AI 生成的题必须人工核对答案、选项和解析，确认后再入库。</li>
+                <li>照片可能含姓名、学校等信息，上传前请先遮挡。</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>题库工作台 · 数据保存在当前浏览器 · 导出后由你决定是否发布</p>
+      <p class="footer__small"><a href="../textbooks/">教材中心</a> · <a href="../index.html">期中闯关</a> · 题库自检：<code>node scripts/check-questions.mjs</code></p>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="../assets/questions.js"></script>
+  <script src="assets/generators.js"></script>
+  <script src="assets/admin.js"></script>
+</body>
+</html>

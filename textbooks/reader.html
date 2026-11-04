@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#FBF4E4">
+  <meta name="description" content="五年级上册教材在线翻页阅读。">
+  <title>在线翻阅 · 教材中心</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="assets/textbooks.css">
+</head>
+<body class="reader-page">
+  <header class="reader-top">
+    <a class="reader-back" href="index.html" aria-label="返回教材书架">← 教材</a>
+    <div class="reader-title">
+      <span class="reader-subject" id="reader-subject">教材</span>
+      <span class="reader-title__text">
+        <b id="reader-title">正在加载…</b>
+        <small id="reader-edition"></small>
+      </span>
+    </div>
+    <div class="reader-actions">
+      <button type="button" class="reader-btn reader-btn--icon" id="toc-toggle" aria-expanded="false" aria-controls="reader-side">目录</button>
+      <a class="reader-btn" id="pdf-link" href="#" target="_blank" rel="noopener noreferrer">原文件 ↗</a>
+    </div>
+  </header>
+
+  <div class="reader-shell">
+    <aside class="reader-side" id="reader-side" aria-label="教材目录">
+      <div class="reader-side__head">
+        <p>目录</p>
+        <button type="button" class="reader-side__close" id="side-close" aria-label="关闭目录">×</button>
+      </div>
+      <nav class="toc" id="toc" aria-label="单元与章节"></nav>
+      <p class="toc-hint" id="toc-hint"></p>
+      <section class="unit-graph" id="unit-graph" hidden aria-labelledby="unit-graph-title">
+        <div class="unit-graph__head">
+          <p id="unit-graph-title">本单元知识图谱</p>
+          <span id="unit-graph-count"></span>
+        </div>
+        <div class="unit-graph__topics" id="unit-graph-topics"></div>
+        <p class="unit-graph__note" id="unit-graph-note"></p>
+        <div class="unit-graph__actions">
+          <a id="unit-explore" href="#" target="_blank" rel="noopener noreferrer">看知识图谱 →</a>
+          <a id="unit-diagnose" href="#" target="_blank" rel="noopener noreferrer">诊断本单元 →</a>
+        </div>
+      </section>
+      <div class="reader-side__foot">
+        <a id="side-source" href="#" target="_blank" rel="noopener noreferrer">教材来源 ↗</a>
+        <a id="side-official" href="https://basic.smartedu.cn/tchMaterial/" target="_blank" rel="noopener noreferrer">官方平台 ↗</a>
+      </div>
+    </aside>
+
+    <div class="reader-main">
+      <div class="reader-toolbar" aria-label="阅读工具栏">
+        <div class="reader-toolbar__group">
+          <button type="button" class="reader-btn" id="prev-page" aria-label="上一页">← 上一页</button>
+          <label class="page-jump">
+            <span class="visually-hidden">跳到页码</span>
+            <input type="number" id="page-input" min="1" value="1" inputmode="numeric" aria-label="当前页码">
+            <span>/ <b id="page-total">0</b></span>
+          </label>
+          <button type="button" class="reader-btn" id="next-page" aria-label="下一页">下一页 →</button>
+        </div>
+        <div class="reader-toolbar__group">
+          <button type="button" class="reader-btn reader-btn--icon" id="zoom-out" aria-label="缩小">−</button>
+          <button type="button" class="reader-btn" id="fit-page" aria-pressed="true">适应页面</button>
+          <button type="button" class="reader-btn" id="fit-width" aria-pressed="false">适应宽度</button>
+          <button type="button" class="reader-btn reader-btn--icon" id="zoom-in" aria-label="放大">+</button>
+          <button type="button" class="reader-btn reader-btn--icon" id="fullscreen" aria-label="全屏阅读">⛶</button>
+        </div>
+      </div>
+
+      <div class="reader-stage" id="stage">
+        <div class="reader-loading" id="loading">
+          <span class="reader-loading__spinner" aria-hidden="true"></span>
+          <p id="loading-text">正在打开教材…</p>
+          <div class="reader-loadbar" role="progressbar" aria-label="PDF 加载进度"><span id="loadbar"></span></div>
+          <p class="reader-loading__hint">首次打开需加载约 10–25 MB，之后浏览器会缓存</p>
+        </div>
+
+        <div class="reader-error" id="error" hidden>
+          <b>这一页暂时打不开</b>
+          <p id="error-text">可能是上游 PDF 链接暂时不可用。</p>
+          <div class="reader-error__actions">
+            <a class="btn btn--primary" id="error-open" href="#" target="_blank" rel="noopener noreferrer">在新标签页打开 PDF</a>
+            <a class="btn btn--ghost" href="index.html">返回书架</a>
+          </div>
+        </div>
+
+        <canvas id="pdf-canvas" aria-label="教材页面"></canvas>
+      </div>
+
+      <div class="reader-foot">
+        <span id="page-status">第 1 页</span>
+        <span class="reader-foot__hint">← → 翻页 · + − 缩放 · 手机上可左右滑动</span>
+        <span id="local-note" class="reader-foot__local"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="side-scrim" id="side-scrim" hidden></div>
+
+  <script src="vendor/pdfjs/pdf.min.js"></script>
+  <script src="assets/reader.js"></script>
+</body>
+</html>

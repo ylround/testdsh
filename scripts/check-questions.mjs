@@ -1,6 +1,6 @@
 /*
  * 题库自检：node scripts/check-questions.mjs
- * 校验每题都有知识点、解析、4 个不重复选项和合法的答案下标。
+ * 校验每题都有知识点、解析、3–4 个不重复选项和合法的答案下标。
  */
 import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
@@ -37,8 +37,8 @@ for (const key of subjects) {
         errors.push(`${question.id}: 缺少 ${field}`);
       }
     }
-    if (!Array.isArray(question.options) || question.options.length !== 4) {
-      errors.push(`${question.id}: 必须有 4 个选项`);
+    if (!Array.isArray(question.options) || question.options.length < 3 || question.options.length > 4) {
+      errors.push(`${question.id}: 必须有 3–4 个选项`);
       continue;
     }
     if (new Set(question.options).size !== question.options.length) {

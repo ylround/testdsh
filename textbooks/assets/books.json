@@ -1,0 +1,468 @@
+{
+  "updatedAt": "2026-11-03",
+  "notice": "教材 PDF 引用自公开归档项目 ChinaTextbook，版权归原出版方所有。本仓库不复制、不再分发教材文件，仅提供在线阅读入口，供个人学习使用；请勿用于商业用途或二次分发。",
+  "source": {
+    "label": "ChinaTextbook",
+    "url": "https://github.com/TapXWorld/ChinaTextbook",
+    "officialLabel": "国家中小学智慧教育平台",
+    "officialUrl": "https://basic.smartedu.cn/tchMaterial/"
+  },
+  "books": [
+    {
+      "id": "cn-g5-v1",
+      "subject": "chinese",
+      "label": "语文",
+      "title": "语文 五年级上册",
+      "edition": "统编版",
+      "publisher": "人民教育出版社",
+      "grade": "五年级上册",
+      "mark": "语",
+      "summary": "八个单元，从一花一鸟到读书明智，包含古诗、说明文、民间故事和爱国情怀。",
+      "pdf": "https://raw.githubusercontent.com/TapXWorld/ChinaTextbook/master/%E5%B0%8F%E5%AD%A6/%E8%AF%AD%E6%96%87/%E7%BB%9F%E7%BC%96%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E8%AF%AD%E6%96%87%E4%BA%94%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf",
+      "localPdf": "files/cn-g5-v1.pdf",
+      "sourcePage": "https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E8%AF%AD%E6%96%87/%E7%BB%9F%E7%BC%96%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E8%AF%AD%E6%96%87%E4%BA%94%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf",
+      "units": [
+        {
+          "no": "第一单元",
+          "title": "一花一鸟总关情",
+          "lessons": [
+            "1 白鹭",
+            "2 落花生",
+            "3 桂花雨",
+            "4 珍珠鸟",
+            "习作：我的心爱之物",
+            "语文园地"
+          ],
+          "points": [
+            "修辞手法",
+            "课文理解",
+            "字词积累"
+          ],
+          "inQuiz": true,
+          "page": 6
+        },
+        {
+          "no": "第二单元",
+          "title": "阅读要有一定的速度",
+          "lessons": [
+            "5 搭石",
+            "6 将相和",
+            "7 什么比猎豹的速度更快",
+            "8 冀中的地道战",
+            "习作：漫画老师",
+            "语文园地"
+          ],
+          "points": [
+            "说明方法",
+            "课文理解",
+            "字词积累"
+          ],
+          "inQuiz": true,
+          "page": 20
+        },
+        {
+          "no": "第三单元",
+          "title": "民间故事",
+          "lessons": [
+            "9 猎人海力布",
+            "10 牛郎织女（一）",
+            "11 牛郎织女（二）",
+            "口语交际：讲民间故事",
+            "习作：缩写故事",
+            "语文园地"
+          ],
+          "points": [
+            "民间故事",
+            "课文理解"
+          ],
+          "inQuiz": true,
+          "page": 36
+        },
+        {
+          "no": "第四单元",
+          "title": "爱国情怀",
+          "lessons": [
+            "12 古诗三首",
+            "13 少年中国说（节选）",
+            "14 圆明园的毁灭",
+            "15 小岛",
+            "习作：二十年后的家乡",
+            "语文园地"
+          ],
+          "points": [
+            "古诗文",
+            "课文理解",
+            "语言运用"
+          ],
+          "inQuiz": true,
+          "page": 54
+        },
+        {
+          "no": "第五单元",
+          "title": "说明文",
+          "lessons": [
+            "16 太阳",
+            "17 松鼠",
+            "习作例文",
+            "习作：介绍一种事物"
+          ],
+          "points": [
+            "说明方法"
+          ],
+          "inQuiz": false,
+          "page": 70
+        },
+        {
+          "no": "第六单元",
+          "title": "父母之爱",
+          "lessons": [
+            "18 慈母情深",
+            "19 父爱之舟",
+            "20 “精彩极了”和“糟糕透了”",
+            "口语交际",
+            "习作",
+            "语文园地"
+          ],
+          "points": [
+            "课文理解",
+            "语言运用"
+          ],
+          "inQuiz": false,
+          "page": 80
+        },
+        {
+          "no": "第七单元",
+          "title": "四时景物皆成趣",
+          "lessons": [
+            "21 古诗词三首",
+            "22 四季之美",
+            "23 鸟的天堂",
+            "24 月迹",
+            "习作",
+            "语文园地"
+          ],
+          "points": [
+            "古诗文",
+            "修辞手法"
+          ],
+          "inQuiz": false,
+          "page": 96
+        },
+        {
+          "no": "第八单元",
+          "title": "读书明智",
+          "lessons": [
+            "25 古人谈读书",
+            "26 忆读书",
+            "27 我的“长生果”",
+            "口语交际",
+            "习作",
+            "语文园地"
+          ],
+          "points": [
+            "古诗文",
+            "课文理解"
+          ],
+          "inQuiz": false,
+          "page": 110
+        }
+      ],
+      "mirrors": [
+        "https://cdn.jsdelivr.net/gh/TapXWorld/ChinaTextbook@master/%E5%B0%8F%E5%AD%A6/%E8%AF%AD%E6%96%87/%E7%BB%9F%E7%BC%96%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E8%AF%AD%E6%96%87%E4%BA%94%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf",
+        "https://raw.githubusercontent.com/TapXWorld/ChinaTextbook/master/%E5%B0%8F%E5%AD%A6/%E8%AF%AD%E6%96%87/%E7%BB%9F%E7%BC%96%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E8%AF%AD%E6%96%87%E4%BA%94%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf"
+      ]
+    },
+    {
+      "id": "ma-g5-v1",
+      "subject": "math",
+      "label": "数学",
+      "title": "数学 五年级上册",
+      "edition": "人教版",
+      "publisher": "人民教育出版社",
+      "grade": "五年级上册",
+      "mark": "数",
+      "summary": "小数乘法、位置、小数除法、可能性、简易方程、多边形面积和植树问题。",
+      "pdf": "https://raw.githubusercontent.com/TapXWorld/ChinaTextbook/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E4%BA%94%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf",
+      "localPdf": "files/ma-g5-v1.pdf",
+      "sourcePage": "https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E4%BA%94%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf",
+      "units": [
+        {
+          "no": "第一单元",
+          "title": "小数乘法",
+          "lessons": [
+            "小数乘整数",
+            "小数乘小数",
+            "积的近似数",
+            "整数乘法运算定律推广到小数",
+            "解决问题"
+          ],
+          "points": [
+            "小数乘法",
+            "近似数",
+            "简便运算"
+          ],
+          "inQuiz": true,
+          "page": 7
+        },
+        {
+          "no": "第二单元",
+          "title": "位置",
+          "lessons": [
+            "用数对表示位置",
+            "在方格纸上用数对确定位置"
+          ],
+          "points": [
+            "位置"
+          ],
+          "inQuiz": true,
+          "page": 24
+        },
+        {
+          "no": "第三单元",
+          "title": "小数除法",
+          "lessons": [
+            "除数是整数的小数除法",
+            "一个数除以小数",
+            "商的近似数",
+            "循环小数",
+            "用计算器探索规律",
+            "解决问题"
+          ],
+          "points": [
+            "小数除法",
+            "近似数",
+            "解决问题"
+          ],
+          "inQuiz": true,
+          "page": 29
+        },
+        {
+          "no": "第四单元",
+          "title": "可能性",
+          "lessons": [
+            "事件发生的可能性",
+            "可能性的大小"
+          ],
+          "points": [
+            "可能性"
+          ],
+          "inQuiz": false,
+          "page": 49
+        },
+        {
+          "no": "第五单元",
+          "title": "简易方程",
+          "lessons": [
+            "用字母表示数",
+            "方程的意义",
+            "等式的性质",
+            "解方程",
+            "实际问题与方程"
+          ],
+          "points": [
+            "简易方程"
+          ],
+          "inQuiz": false,
+          "page": 57
+        },
+        {
+          "no": "第六单元",
+          "title": "多边形的面积",
+          "lessons": [
+            "平行四边形的面积",
+            "三角形的面积",
+            "梯形的面积",
+            "组合图形的面积"
+          ],
+          "points": [
+            "多边形面积"
+          ],
+          "inQuiz": false,
+          "page": 89
+        },
+        {
+          "no": "第七单元",
+          "title": "数学广角——植树问题",
+          "lessons": [
+            "两端都栽",
+            "两端都不栽",
+            "封闭图形上的植树问题"
+          ],
+          "points": [
+            "植树问题"
+          ],
+          "inQuiz": false,
+          "page": 109
+        },
+        {
+          "no": "第八单元",
+          "title": "总复习",
+          "lessons": [
+            "小数乘除法",
+            "简易方程",
+            "多边形面积",
+            "位置与可能性"
+          ],
+          "points": [
+            "综合复习"
+          ],
+          "inQuiz": false,
+          "page": 114
+        }
+      ],
+      "mirrors": [
+        "https://cdn.jsdelivr.net/gh/TapXWorld/ChinaTextbook@master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E4%BA%94%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf",
+        "https://raw.githubusercontent.com/TapXWorld/ChinaTextbook/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E4%BA%94%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf"
+      ]
+    },
+    {
+      "id": "en-g5-v1",
+      "subject": "english",
+      "label": "英语",
+      "title": "英语（PEP）五年级上册",
+      "edition": "人教版 PEP（三年级起点）",
+      "publisher": "人民教育出版社",
+      "grade": "五年级上册",
+      "mark": "英",
+      "summary": "六个单元，围绕人物、星期、食物、能力、房间和自然公园展开。",
+      "pdf": "https://raw.githubusercontent.com/TapXWorld/ChinaTextbook/master/%E5%B0%8F%E5%AD%A6/%E8%8B%B1%E8%AF%AD/%E4%BA%BA%E6%95%99%E7%89%88%EF%BC%88PEP%EF%BC%89%EF%BC%88%E4%B8%89%E5%B9%B4%E7%BA%A7%E8%B5%B7%E7%82%B9%EF%BC%89%EF%BC%88%E4%B8%BB%E7%BC%96%EF%BC%9A%E5%90%B4%E6%AC%A3%EF%BC%89/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E8%8B%B1%E8%AF%AD%EF%BC%88PEP%EF%BC%89%EF%BC%88%E4%B8%89%E5%B9%B4%E7%BA%A7%E8%B5%B7%E7%82%B9%EF%BC%89%E4%BA%94%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf",
+      "localPdf": "files/en-g5-v1.pdf",
+      "sourcePage": "https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E8%8B%B1%E8%AF%AD/%E4%BA%BA%E6%95%99%E7%89%88%EF%BC%88PEP%EF%BC%89%EF%BC%88%E4%B8%89%E5%B9%B4%E7%BA%A7%E8%B5%B7%E7%82%B9%EF%BC%89%EF%BC%88%E4%B8%BB%E7%BC%96%EF%BC%9A%E5%90%B4%E6%AC%A3%EF%BC%89/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E8%8B%B1%E8%AF%AD%EF%BC%88PEP%EF%BC%89%EF%BC%88%E4%B8%89%E5%B9%B4%E7%BA%A7%E8%B5%B7%E7%82%B9%EF%BC%89%E4%BA%94%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf",
+      "units": [
+        {
+          "no": "Unit 1",
+          "title": "What's he like?",
+          "lessons": [
+            "Let's talk",
+            "Let's learn",
+            "Let's spell",
+            "Read and write",
+            "Story time"
+          ],
+          "points": [
+            "词汇",
+            "句型",
+            "语法"
+          ],
+          "inQuiz": true,
+          "page": 7
+        },
+        {
+          "no": "Unit 2",
+          "title": "My week",
+          "lessons": [
+            "Let's talk",
+            "Let's learn",
+            "Let's spell",
+            "Read and write",
+            "Story time"
+          ],
+          "points": [
+            "词汇",
+            "句型",
+            "情景交际"
+          ],
+          "inQuiz": true,
+          "page": 17
+        },
+        {
+          "no": "Unit 3",
+          "title": "What would you like?",
+          "lessons": [
+            "Let's talk",
+            "Let's learn",
+            "Let's spell",
+            "Read and write",
+            "Story time"
+          ],
+          "points": [
+            "词汇",
+            "句型",
+            "情景交际"
+          ],
+          "inQuiz": true,
+          "page": 27
+        },
+        {
+          "no": "Recycle 1",
+          "title": "Recycle 1",
+          "lessons": [
+            "Review Units 1–3"
+          ],
+          "points": [
+            "综合复习"
+          ],
+          "inQuiz": false,
+          "page": 37
+        },
+        {
+          "no": "Unit 4",
+          "title": "What can you do?",
+          "lessons": [
+            "Let's talk",
+            "Let's learn",
+            "Let's spell",
+            "Read and write",
+            "Story time"
+          ],
+          "points": [
+            "词汇",
+            "句型"
+          ],
+          "inQuiz": false,
+          "page": 41
+        },
+        {
+          "no": "Unit 5",
+          "title": "There is a big bed",
+          "lessons": [
+            "Let's talk",
+            "Let's learn",
+            "Let's spell",
+            "Read and write",
+            "Story time"
+          ],
+          "points": [
+            "词汇",
+            "句型"
+          ],
+          "inQuiz": false,
+          "page": 51
+        },
+        {
+          "no": "Unit 6",
+          "title": "In a nature park",
+          "lessons": [
+            "Let's talk",
+            "Let's learn",
+            "Let's spell",
+            "Read and write",
+            "Story time"
+          ],
+          "points": [
+            "词汇",
+            "句型"
+          ],
+          "inQuiz": false,
+          "page": 61
+        },
+        {
+          "no": "Recycle 2",
+          "title": "Recycle 2",
+          "lessons": [
+            "Review Units 4–6"
+          ],
+          "points": [
+            "综合复习"
+          ],
+          "inQuiz": false,
+          "page": 71
+        }
+      ],
+      "mirrors": [
+        "https://cdn.jsdelivr.net/gh/TapXWorld/ChinaTextbook@master/%E5%B0%8F%E5%AD%A6/%E8%8B%B1%E8%AF%AD/%E4%BA%BA%E6%95%99%E7%89%88%EF%BC%88PEP%EF%BC%89%EF%BC%88%E4%B8%89%E5%B9%B4%E7%BA%A7%E8%B5%B7%E7%82%B9%EF%BC%89%EF%BC%88%E4%B8%BB%E7%BC%96%EF%BC%9A%E5%90%B4%E6%AC%A3%EF%BC%89/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E8%8B%B1%E8%AF%AD%EF%BC%88PEP%EF%BC%89%EF%BC%88%E4%B8%89%E5%B9%B4%E7%BA%A7%E8%B5%B7%E7%82%B9%EF%BC%89%E4%BA%94%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf",
+        "https://raw.githubusercontent.com/TapXWorld/ChinaTextbook/master/%E5%B0%8F%E5%AD%A6/%E8%8B%B1%E8%AF%AD/%E4%BA%BA%E6%95%99%E7%89%88%EF%BC%88PEP%EF%BC%89%EF%BC%88%E4%B8%89%E5%B9%B4%E7%BA%A7%E8%B5%B7%E7%82%B9%EF%BC%89%EF%BC%88%E4%B8%BB%E7%BC%96%EF%BC%9A%E5%90%B4%E6%AC%A3%EF%BC%89/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E8%8B%B1%E8%AF%AD%EF%BC%88PEP%EF%BC%89%EF%BC%88%E4%B8%89%E5%B9%B4%E7%BA%A7%E8%B5%B7%E7%82%B9%EF%BC%89%E4%BA%94%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf"
+      ]
+    }
+  ]
+}
