@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#080D21">
+  <meta name="description" content="四科探险队：语文、数学、英语、科学四颗知识星球，12 个关卡、72 道题，答对收集星星，支持每日混合挑战。">
+  <title>四科探险队 · 语数英科学习游戏</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-screen="home">
+  <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <symbol id="icon-star" viewBox="0 0 24 24">
+      <path d="M12 3.4l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.2-4.1 5.8-.8z"/>
+    </symbol>
+    <symbol id="icon-rocket" viewBox="0 0 24 24">
+      <path d="M12 2.8c3.3 2.1 5 5.6 5 9.5l-1.6 3.4H8.6L7 12.3c0-3.9 1.7-7.4 5-9.5Z"/>
+      <circle cx="12" cy="9.6" r="1.9"/>
+      <path d="M8.6 15.7l-2.4 3.4 3.5-.9M15.4 15.7l2.4 3.4-3.5-.9M12 16v4.6"/>
+    </symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24">
+      <path d="M4 5.6A2.6 2.6 0 0 1 6.6 3H20v15.4H6.6A2.6 2.6 0 0 0 4 21V5.6Z"/>
+      <path d="M4 18.4A2.6 2.6 0 0 1 6.6 16H20M8 7h8M8 10.6h5"/>
+    </symbol>
+    <symbol id="icon-math" viewBox="0 0 24 24">
+      <rect x="4.5" y="2.8" width="15" height="18.4" rx="2.6"/>
+      <path d="M8 7.2h8M8 11.6h2.2M13.8 11.6H16M8 15.8h2.2M13.8 15.8H16M8 19.4h2.2M13.8 19.4H16"/>
+    </symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.6"/>
+      <path d="M3.6 12h16.8M12 3.4c2.4 2.3 3.6 5.3 3.6 8.6S14.4 18.3 12 20.6C9.6 18.3 8.4 15.3 8.4 12S9.6 5.7 12 3.4Z"/>
+    </symbol>
+    <symbol id="icon-atom" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="2.2"/>
+      <ellipse cx="12" cy="12" rx="9" ry="3.8"/>
+      <ellipse cx="12" cy="12" rx="9" ry="3.8" transform="rotate(60 12 12)"/>
+      <ellipse cx="12" cy="12" rx="9" ry="3.8" transform="rotate(120 12 12)"/>
+    </symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24">
+      <rect x="5" y="10.4" width="14" height="10" rx="2.4"/>
+      <path d="M8.2 10.4V7.8a3.8 3.8 0 0 1 7.6 0v2.6"/>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <path d="M4.6 12.6l4.7 4.6L19.4 6.8"/>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6L6 18"/>
+    </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+      <path d="M4.5 12h14M13 6.5l5.5 5.5-5.5 5.5"/>
+    </symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24">
+      <rect x="3.8" y="5.2" width="16.4" height="15" rx="2.4"/>
+      <path d="M8 3.2v4M16 3.2v4M3.8 9.8h16.4"/>
+      <path d="M8 13.6h2M14 13.6h2M8 17h2M14 17h2"/>
+    </symbol>
+    <symbol id="icon-trophy" viewBox="0 0 24 24">
+      <path d="M7 4.2h10v3.4a5 5 0 0 1-10 0V4.2Z"/>
+      <path d="M7 5.4H4.4V7A3.6 3.6 0 0 0 7.6 10.6M17 5.4h2.6V7a3.6 3.6 0 0 1-3.2 3.6M12 12.6v4M8.4 20.6h7.2M9.6 16.6h4.8"/>
+    </symbol>
+    <symbol id="icon-bolt" viewBox="0 0 24 24">
+      <path d="M13.4 2.8L5.6 13.4h5.2l-1.4 7.8 7.8-10.6h-5.2z"/>
+    </symbol>
+  </svg>
+
+  <div class="sky" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" data-action="home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg class="icon"><use href="#icon-rocket"></use></svg>
+      </span>
+      <span class="brand__text">
+        <b>四科探险队</b>
+        <small>语数英科 · 星球闯关</small>
+      </span>
+    </a>
+    <div class="topbar__tools">
+      <span class="star-counter" aria-label="已收集星星">
+        <svg class="icon icon--star" aria-hidden="true"><use href="#icon-star"></use></svg>
+        <b id="total-stars">0</b>
+        <span class="star-counter__max">/ 36</span>
+      </span>
+      <button class="icon-btn" id="sound-toggle" type="button" data-action="sound" aria-pressed="true" aria-label="关闭音效">🔊</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="screen screen--home" id="screen-home" aria-labelledby="home-title">
+      <div class="wrap">
+        <div class="hero">
+          <div class="hero__copy">
+            <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>五年级上册 · 四科闯关</p>
+            <h1 id="home-title" tabindex="-1">四科探险队</h1>
+            <p class="hero__lead">驾驶知识飞船，穿越语文、数学、英语、科学四颗星球，收集 <b>36 颗星星</b>。</p>
+            <div class="hero__actions">
+              <button class="btn btn--primary" type="button" data-action="scroll-planets">
+                开始探险
+                <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+              </button>
+              <a class="btn btn--ghost" href="#how-to-play">怎么玩</a>
+            </div>
+            <dl class="hero__stats">
+              <div><dt>知识星球</dt><dd>4 颗</dd></div>
+              <div><dt>闯关地图</dt><dd>12 关</dd></div>
+              <div><dt>精选题目</dt><dd>72 道</dd></div>
+            </dl>
+          </div>
+          <div class="hero__art" aria-hidden="true">
+            <svg viewBox="0 0 560 520" role="presentation">
+              <defs>
+                <linearGradient id="art-body" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#FFF9ED"/>
+                  <stop offset="1" stop-color="#BFD4FF"/>
+                </linearGradient>
+                <linearGradient id="art-flame" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#FFE082"/>
+                  <stop offset="1" stop-color="#FF7A3C"/>
+                </linearGradient>
+                <radialGradient id="art-window" cx="35%" cy="30%" r="75%">
+                  <stop offset="0" stop-color="#B9F4FF"/>
+                  <stop offset="1" stop-color="#3A8DFF"/>
+                </radialGradient>
+              </defs>
+              <ellipse cx="282" cy="270" rx="232" ry="132" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1.5" stroke-dasharray="4 11" transform="rotate(-16 282 270)"/>
+              <ellipse cx="282" cy="270" rx="176" ry="92" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="1.5" stroke-dasharray="3 9" transform="rotate(24 282 270)"/>
+              <g class="art-spark">
+                <circle cx="454" cy="72" r="2.4" fill="#FFE9A8"/>
+                <circle cx="96" cy="66" r="2" fill="#BFE6FF"/>
+                <circle cx="500" cy="250" r="2.6" fill="#FFC5C5"/>
+                <circle cx="58" cy="268" r="2.2" fill="#FFE9A8"/>
+                <circle cx="210" cy="32" r="1.8" fill="#D9C8FF"/>
+                <circle cx="404" cy="470" r="2" fill="#BFE6FF"/>
+              </g>
+              <g class="art-planet art-planet--1">
+                <ellipse cx="108" cy="142" rx="34" ry="11" fill="none" stroke="#FF7A7A" stroke-width="2" opacity=".55" transform="rotate(-18 108 142)"/>
+                <circle cx="108" cy="142" r="23" fill="#FF7A7A"/>
+                <circle cx="100" cy="134" r="7" fill="#FFD1D1" opacity=".75"/>
+                <text x="108" y="143" text-anchor="middle" dominant-baseline="central" fill="#2A0B0B" font-size="17" font-weight="700">语</text>
+              </g>
+              <g class="art-planet art-planet--2">
+                <circle cx="466" cy="176" r="27" fill="#5B8DEF"/>
+                <circle cx="457" cy="167" r="8" fill="#C9DBFF" opacity=".8"/>
+                <text x="466" y="177" text-anchor="middle" dominant-baseline="central" fill="#081733" font-size="18" font-weight="700">数</text>
+              </g>
+              <g class="art-planet art-planet--3">
+                <circle cx="454" cy="390" r="23" fill="#2EC4B6"/>
+                <circle cx="447" cy="383" r="6.5" fill="#C5FFF8" opacity=".8"/>
+                <text x="454" y="391" text-anchor="middle" dominant-baseline="central" fill="#062B27" font-size="16" font-weight="700">英</text>
+              </g>
+              <g class="art-planet art-planet--4">
+                <ellipse cx="112" cy="382" rx="38" ry="12" fill="none" stroke="#B57BFF" stroke-width="2" opacity=".5" transform="rotate(20 112 382)"/>
+                <circle cx="112" cy="382" r="26" fill="#B57BFF"/>
+                <circle cx="104" cy="374" r="8" fill="#E7D6FF" opacity=".8"/>
+                <text x="112" y="383" text-anchor="middle" dominant-baseline="central" fill="#1E0B33" font-size="17" font-weight="700">科</text>
+              </g>
+              <g class="art-rocket" transform="translate(282 258) rotate(12)">
+                <path d="M0 -132 C 44 -102 66 -48 66 16 C 66 60 42 92 0 106 C -42 92 -66 60 -66 16 C -66 -48 -44 -102 0 -132 Z" fill="url(#art-body)" stroke="rgba(8,13,33,.4)" stroke-width="4"/>
+                <path d="M-66 24 L-108 98 L-58 82 Z" fill="#FF7A7A" stroke="rgba(8,13,33,.35)" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M66 24 L108 98 L58 82 Z" fill="#FF7A7A" stroke="rgba(8,13,33,.35)" stroke-width="4" stroke-linejoin="round"/>
+                <circle cx="0" cy="-24" r="28" fill="#101A3F" stroke="#DDF6FF" stroke-width="5"/>
+                <circle cx="0" cy="-24" r="17" fill="url(#art-window)"/>
+                <circle cx="-6" cy="-30" r="5" fill="#FFFFFF" opacity=".9"/>
+                <path d="M-34 48h68" stroke="rgba(8,13,33,.18)" stroke-width="5" stroke-linecap="round"/>
+                <path d="M-24 104 Q0 178 24 104 Q0 136 -24 104 Z" fill="url(#art-flame)"/>
+                <path d="M-12 106 Q0 150 12 106 Q0 124 -12 106 Z" fill="#FFF3C4"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <section class="daily" id="daily-card" aria-labelledby="daily-title">
+          <div class="daily__icon" aria-hidden="true">
+            <svg class="icon"><use href="#icon-calendar"></use></svg>
+          </div>
+          <div class="daily__copy">
+            <p class="daily__kicker">每日挑战 · <span id="daily-date">今天</span></p>
+            <h2 id="daily-title">四科混合挑战</h2>
+            <p>语文、数学、英语、科学各 2 题，共 8 题，每天换一套。</p>
+          </div>
+          <div class="daily__status">
+            <div><span class="daily__label">今日最佳</span><b id="daily-best">还没挑战</b></div>
+            <div><span class="daily__label">连续挑战</span><b id="daily-streak">今天开始</b></div>
+          </div>
+          <button class="btn btn--gold" id="daily-start" type="button" data-action="start-daily">开始挑战</button>
+        </section>
+
+        <section class="section planets" id="planets" aria-labelledby="planets-title">
+          <div class="section__head">
+            <div>
+              <p class="section__kicker">SELECT A PLANET</p>
+              <h2 id="planets-title" tabindex="-1">选择你的星球</h2>
+            </div>
+            <p class="section__hint">每颗星球 3 关，每关 6 题；拿到 1 颗星就能解锁下一关。</p>
+          </div>
+          <div class="planet-grid" id="planet-grid"></div>
+        </section>
+
+        <section class="how" id="how-to-play" aria-labelledby="how-title">
+          <div class="section__head">
+            <div>
+              <p class="section__kicker">HOW TO PLAY</p>
+              <h2 id="how-title">怎么玩</h2>
+            </div>
+          </div>
+          <ol class="how__list">
+            <li>
+              <span class="how__num">01</span>
+              <h3>选择星球</h3>
+              <p>从语文、数学、英语、科学中挑一颗，按顺序闯过 3 个关卡。</p>
+            </li>
+            <li>
+              <span class="how__num">02</span>
+              <h3>答对得星</h3>
+              <p>每关 6 道题，答对越多星星越多；答完马上看到解析和知识点提示。</p>
+            </li>
+            <li>
+              <span class="how__num">03</span>
+              <h3>收集星星</h3>
+              <p>星星自动保存在本机，达到 1 颗星即可解锁下一关，向 36 颗星出发。</p>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-planet" hidden aria-label="星球关卡">
+      <div class="wrap">
+        <button class="back-btn" type="button" data-action="home">
+          <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+          返回星球图
+        </button>
+        <div class="planet-hero" id="planet-hero"></div>
+        <div class="level-list" id="level-list"></div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-quiz" hidden aria-labelledby="quiz-question">
+      <div class="quiz-wrap">
+        <div class="quiz-top">
+          <button class="back-btn" type="button" data-action="exit-quiz">
+            <svg class="icon" aria-hidden="true"><use href="#icon-close"></use></svg>
+            退出
+          </button>
+          <span class="quiz-top__title" id="quiz-title"></span>
+          <span class="quiz-top__score" id="quiz-score">0 分</span>
+        </div>
+        <div class="quiz-progress">
+          <div class="progress" id="quiz-progress" role="progressbar" aria-label="答题进度" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1">
+            <span id="quiz-progress-fill"></span>
+          </div>
+          <span class="quiz-progress__label" id="quiz-progress-label">第 1 / 6 题</span>
+        </div>
+        <article class="question-card">
+          <div class="question-card__meta">
+            <span class="subject-chip" id="quiz-subject-chip"></span>
+            <span class="topic-chip" id="quiz-topic"></span>
+            <span class="combo" id="quiz-combo" hidden>连对 ×2</span>
+          </div>
+          <h2 id="quiz-question" tabindex="-1"></h2>
+          <div class="options" id="quiz-options" role="group" aria-labelledby="quiz-question"></div>
+          <div class="feedback" id="quiz-feedback" hidden aria-live="polite">
+            <div class="feedback__head">
+              <span class="feedback__icon" id="feedback-icon" aria-hidden="true"></span>
+              <b id="feedback-title"></b>
+            </div>
+            <p id="feedback-explain"></p>
+            <button class="btn btn--primary" type="button" id="quiz-continue" data-action="continue">下一题</button>
+          </div>
+        </article>
+        <p class="keyboard-hint">键盘：按 1–4 或 A–D 选择答案，回车继续。</p>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-result" hidden aria-label="挑战成绩">
+      <div class="wrap">
+        <div class="result" id="result-content"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>内容范围：五年级上册 · 语文 / 数学 / 英语 / 科学</p>
+    <p class="site-footer__note">无需联网，星星和进度只保存在当前浏览器。</p>
+    <button class="link-btn" type="button" data-action="reset">重置学习进度</button>
+  </footer>
+
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog class="modal" id="confirm-dialog" aria-labelledby="confirm-title">
+    <h2 id="confirm-title">确认操作</h2>
+    <p id="confirm-text"></p>
+    <div class="modal__actions">
+      <button class="btn btn--ghost" type="button" id="confirm-cancel">取消</button>
+      <button class="btn btn--danger" type="button" id="confirm-ok">确认</button>
+    </div>
+  </dialog>
+
+  <noscript>
+    <p class="noscript">这个学习游戏需要启用 JavaScript 才能运行。</p>
+  </noscript>
+
+  <script src="assets/questions.js"></script>
+  <script src="assets/game.js"></script>
+</body>
+</html>
