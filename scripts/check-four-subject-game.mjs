@@ -9,9 +9,7 @@ import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const gameDir = join(root, 'four-subject-game');
 const errors = [];
-const notes = [];
 
 function fail(message) {
   errors.push(message);
@@ -192,7 +190,6 @@ function report() {
     console.log(`  科目：${subjectSummary}`);
     console.log(`  合计：${levelCount} 关 / ${questionCount} 题 / ${bank.meta ? bank.meta.totalStars : 36} 颗星`);
     console.log(`  资源：index.html + styles.css + game.js + questions.js + favicon.svg`);
-    notes.forEach((note) => console.log(`  · ${note}`));
   }
 }
 

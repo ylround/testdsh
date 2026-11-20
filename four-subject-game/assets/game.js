@@ -481,7 +481,7 @@
             '<p>' + esc(level.subtitle) + ' · ' + esc(topics) + '</p>' +
             '<span class="level-card__meta">' + esc(meta) + '</span>' +
           '</div>' +
-          '<div class="level-card__stars" aria-label="' + stars + ' 颗星">' + starsMarkup(stars) + '</div>' +
+          '<div class="level-card__stars" role="img" aria-label="' + stars + ' 颗星">' + starsMarkup(stars) + '</div>' +
           '<div class="level-card__action">' + action + '</div>' +
         '</article>'
       );
@@ -933,9 +933,6 @@
         '</section>' +
       '</div>' +
       '<div class="result-actions">' + actions + '</div>';
-
-    var heading = $('#result-title');
-    if (heading) heading.focus({ preventScroll: true });
   }
 
   function buildGroups(run) {
@@ -1050,9 +1047,10 @@
   function confirmAction(options) {
     var dialog = $('#confirm-dialog');
     if (!dialog) {
-      if (window.confirm(options.title + '\n' + options.text)) options.onOk();
+      if (window.confirm(options.title + '\n' + options.text) && options.onOk) options.onOk();
       return;
     }
+    if (dialog.open) return;
     var titleEl = $('#confirm-title');
     var textEl = $('#confirm-text');
     var okBtn = $('#confirm-ok');
@@ -1232,6 +1230,7 @@
 
   document.addEventListener('keydown', function (event) {
     if (state.screen !== 'quiz' || !state.run) return;
+    if (document.querySelector('dialog[open]')) return;
     if (event.key === 'Escape') {
       event.preventDefault();
       requestExitQuiz();
