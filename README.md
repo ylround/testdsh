@@ -2,6 +2,23 @@
 
 dsh-superagent 联调仓库。
 
+## 四科探险队（语数英科学习游戏）
+
+`four-subject-game/` 是一个独立的静态学习游戏：语文、数学、英语、科学四颗知识星球，每科 3 关、每关 6 题，共 12 关 72 题。
+
+- **闯关收集星星**：每关按正确率获得 1–3 颗星，拿到 1 颗星解锁下一关，四科共 36 颗星。
+- **每日混合挑战**：每天从四科各抽 2 题组成 8 题挑战，记录今日最佳和连续挑战天数。
+- **即时反馈**：每题作答后显示正确答案与解析；结算页按知识点汇总掌握度，给出复习提示和错题回顾。
+- **本地进度**：星星、最佳成绩和音效偏好保存在当前浏览器的 `localStorage`，不联网、不上传；页脚可重置进度。
+- **内容范围**：五年级上册，语文（统编版第 1–4 单元）、数学（人教版小数乘除、位置、方程与多边形面积）、英语（PEP Unit 1–4 词汇、句型和语法）、科学（教科版光、地球表面、计量时间与健康生活）。
+- 支持手机、平板和桌面，键盘可用 `1–4` / `A–D` 选择答案、回车继续。
+
+在线访问：<https://ylround-agent.github.io/testdsh/four-subject-game/>
+
+本地访问：在仓库根目录运行 `python3 -m http.server 8000`，打开 <http://localhost:8000/four-subject-game/>；也可以直接双击 `four-subject-game/index.html`。
+
+自检：`node scripts/check-four-subject-game.mjs`（校验四科关卡、题目答案、解析和静态资源）。
+
 ## 五年级期中闯关小游戏
 
 `index.html` 是一个无需联网、双击即可打开的静态小游戏，用来在期中前检测五年级上学期三科的学习情况。
@@ -70,8 +87,9 @@ Hello from superagent
 ## 本地运行与自检
 
 ```bash
-python3 -m http.server 8000            # 打开 /、/textbooks/、/admin/
+python3 -m http.server 8000            # 打开 /、/textbooks/、/admin/、/four-subject-game/
 node scripts/check-questions.mjs       # 题库自检
+node scripts/check-four-subject-game.mjs  # 四科探险队题库与页面自检
 node scripts/check-textbooks.mjs       # 教材目录自检
 node scripts/check-generators.mjs      # 程序出题器自检
 node scripts/build-taxonomy-bridge.mjs  # 重新生成知识图谱桥接数据
